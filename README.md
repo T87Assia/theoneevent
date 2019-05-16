@@ -21,6 +21,6 @@
 Nom d'utilisateur: `admin`
 Mot de passe: `admin`
 
-*Todo list*
+**Todo list**
 
 - [ ] Traduire l'interface en français.
