@@ -34,7 +34,7 @@
                         Paket yang Anda pilih
                     </div>
                     <div class="panel-body">
-                        <?php if (count($transaksi) != null): ?>
+                        <?php if (isset($transaksi) and count($transaksi) != null): ?>
                                 Anda memiliki <?= count($transaksi) ?> pemesanan : <br>
                                 <ul class="list-unstyled">
                                   <li><a href="<?= base_url() . 'lihat/transaksi/' . $transaksi->id_pemesanan ?>" target="_blank" >Pada tanggal <?= nice_date($transaksi->tgl_acara,'d-m-Y') ?> <small><span class="glyphicon glyphicon-new-window"></span></small></a></li>
