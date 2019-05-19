@@ -7,17 +7,17 @@
     <?php endif; ?>
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h4 class="panel-title"><i class="fa fa-envelope"></i> Data Pemesanan</h4>
+            <h4 class="panel-title"><i class="fa fa-envelope"></i> Données de la commande</h4>
         </div>
         <div class="panel-body">
             <table class="table table-bordered table-striped table-hover">
                 <thead>
                     <tr>
-                        <th>No</th>
-                        <th>Kode Transaksi</th>
-                        <th>Nama Pemesan</th>
-                        <th>Status</th>
-                        <th>Tools</th>
+                        <th>Nom</th>
+                        <th>Code de transaction</th>
+                        <th>Nom du client</th>
+                        <th>Statut</th>
+                        <th>Outils</th>
                     </tr>
                 </thead>
                 <tbody>

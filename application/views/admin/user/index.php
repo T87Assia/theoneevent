@@ -7,20 +7,20 @@
     <?php endif; ?>
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h4 class="panel-title"><i class="fa fa-user"></i> Data Users</h4>
+            <h4 class="panel-title"><i class="fa fa-user"></i> Utilisateurs de données</h4>
         </div>
         <div class="panel-body">
             <div class="tool-box">
-                <a href="<?php echo base_url() . 'admin/user/create'; ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Tambah User</a>
+                <a href="<?php echo base_url() . 'admin/user/create'; ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Ajouter un utilisateur</a>
             </div>
             <table class="table table-bordered table-striped table-hover">
                 <thead>
                     <tr>
-                        <th>No</th>
-                        <th>Username</th>
-                        <th>Nama</th>
-                        <th>No Telp</th>
-                        <th>Tools</th>
+                        <th>Num</th>
+                        <th>Nom d'utilisateur</th>
+                        <th>Nom</th>
+                        <th>Num GSM</th>
+                        <th>Outils</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -32,8 +32,8 @@
                             <td><?= $user->name ?></td>
                             <td><?= $user->no_telp ?></td>
                             <td width="10%">
-                                <a href="<?php echo base_url() . 'admin/user/edit/'.$user->user_id; ?>" class="btn btn-xs btn-info" title="Edit"><i class="fa fa-pencil fa-fw"></i></a>
-                                <a href="<?php echo base_url() . 'admin/user/delete/'.$user->user_id; ?>" class="btn btn-xs btn-danger" title="Hapus" onclick="return confirm('Anda yakin ingin menghapus data ini ?')"><i class="fa fa-trash fa-fw"></i></a>
+                                <a href="<?php echo base_url() . 'admin/user/edit/'.$user->user_id; ?>" class="btn btn-xs btn-info" title="Modifier"><i class="fa fa-pencil fa-fw"></i></a>
+                                <a href="<?php echo base_url() . 'admin/user/delete/'.$user->user_id; ?>" class="btn btn-xs btn-danger" title="Supprimer" onclick="return confirm('Anda yakin ingin menghapus data ini ?')"><i class="fa fa-trash fa-fw"></i></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

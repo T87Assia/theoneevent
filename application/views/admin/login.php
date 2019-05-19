@@ -27,20 +27,20 @@
             <div class="col-sm-offset-4 col-sm-4">
                 <div class="box">
                     <center>
-                        <h3 class="heading-title">Admin Login <br> <small class="tagline"><i>Susi Wedding Organizer</i></small></h3>
+                        <h3 class="heading-title">Connexion administrateur <br> <small class="tagline"><i>THE ONE EVENT</i></small></h3>
                     </center>
                     <form action="<?= base_url() . 'admin/login'; ?>" method="post">
                         <div class="form-group">
-                            <input type="text" name="username" class="form-control" placeholder="Username">
+                            <input type="text" name="username" class="form-control" placeholder="Utilisateur">
                         </div>
                         <div class="form-group">
-                            <input type="password" name="password" class="form-control" placeholder="Password">
+                            <input type="password" name="password" class="form-control" placeholder="Mot de passe">
                         </div>
                         <div class="form-group">
-                            <button class="btn btn-primary btn-block">Login</button>
+                            <button class="btn btn-primary btn-block">Connexion</button>
                         </div>
                     </form>
-                    <a href="<?php echo base_url(); ?>">Kembali ke Halaman Awal</a>
+                    <a href="<?php echo base_url(); ?>">Retour à la page d'accueil</a>
                 </div>
             </div>
         </div>
