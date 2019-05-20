@@ -7,14 +7,14 @@
     <?php endif; ?>
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h4 class="panel-title"><i class="fa fa-diamond"></i> Données de paiement</h4>
+            <h4 class="panel-title"><i class="fa fa-diamond"></i> Paiement</h4>
         </div>
         <div class="panel-body">
             <table class="table table-bordered table-striped table-hover">
                 <thead>
                     <tr>
-                        <th>Nom</th>
-                        <th>Code de transaction</th>
+                        <th>Num</th>
+                        <th>Code de la Commande</th>
                         <th>Coordonnées bancaires</th>
                         <th>Preuve</th>
                     </tr>

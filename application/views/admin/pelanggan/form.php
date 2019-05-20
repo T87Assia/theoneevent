@@ -2,28 +2,28 @@
     <label for="nama" class="control-label col-sm-3"> Nom </label>
     <div class="col-sm-6">
         <input type="text" name="nama" value="<?php echo set_value('nama',isset($pelanggan->nama) ? $pelanggan->nama : ''); ?>" class="form-control">
-        <?php echo form_error('nama'); ?>
+        <?php echo form_error('Nom'); ?>
     </div>
 </div>
 <div class="form-group">
-    <label for="no_telp" class="control-label col-sm-3"> Num GSM </label>
+    <label for="no_telp" class="control-label col-sm-3"> GSM </label>
     <div class="col-sm-4">
         <input type="text" name="no_telp" value="<?php echo set_value('no_telp',isset($pelanggan->no_telp) ? $pelanggan->no_telp : ''); ?>" class="form-control">
-        <?php echo form_error('no_telp'); ?>
+        <?php echo form_error('GSM'); ?>
     </div>
 </div>
 <div class="form-group">
     <label for="email" class="control-label col-sm-3"> Email </label>
     <div class="col-sm-4">
         <input type="email" name="email" value="<?php echo set_value('email',isset($pelanggan->email) ? $pelanggan->email : ''); ?>" class="form-control">
-        <?php echo form_error('email'); ?>
+        <?php echo form_error('Email'); ?>
     </div>
 </div>
 <div class="form-group">
     <label for="alamat" class="control-label col-sm-3"> Adresse </label>
     <div class="col-sm-4">
         <textarea name="alamat" class="form-control"><?php echo set_value('alamat',isset($pelanggan->alamat) ? $pelanggan->alamat : ''); ?></textarea>
-        <?php echo form_error('alamat'); ?>
+        <?php echo form_error('Adresse'); ?>
     </div>
 </div>
 <div style="width:100%;text-align:right;">

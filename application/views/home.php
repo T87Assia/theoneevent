@@ -34,7 +34,7 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                    <span class="sr-only">Basculer la navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">THE ONE EVENT</a>
             </div>
@@ -49,10 +49,10 @@
                         <a class="page-scroll" href="#services">Service</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#daftar">Liste</a>
+                        <a class="page-scroll" href="#daftar">Inscription</a>
                     </li>
                     <li>
-                        <a href="<?= base_url() . 'login'; ?>">Login</a>
+                        <a href="<?= base_url() . 'login'; ?>">Se connecter</a>
                     </li>
                 </ul>
             </div>
@@ -66,7 +66,7 @@
         <div class="container">
             <div class="intro-text">
                 <div class="intro-lead-in">Bienvenue à THE ONE EVENT</div>
-                <div class="intro-heading">C'est votre partenaire d'événnement</div>
+                <div class="intro-heading">C'est votre partenaire de bonheur</div>
                 <a href="#services" class="page-scroll btn btn-xl">Dites nous en plus</a>
             </div>
         </div>

@@ -1,19 +1,19 @@
 <div class="col-sm-offset-3 col-sm-5">
-    <h2 class="page-header"><center>Susi Wedding Organizer</center></h2>
+    <h2 class="page-header"><center>THE ONE EVENT</center></h2>
     <table class="table table-bordered table-condensed table-responsive table-striped">
         <thead>
             <tr>
-                <td colspan="3"><h4>Data Pelanggan</h4></td>
+                <td colspan="3"><h4>Données client</h4></td>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Nama</td>
+                <td>Nom</td>
                 <td>:</td>
                 <td>Lukman Bagus Saputra</td>
             </tr>
             <tr>
-                <td>No Hp</td>
+                <td>GSM</td>
                 <td>:</td>
                 <td>089610010321</td>
             </tr>
@@ -27,7 +27,7 @@
 
     <form action="#" class="form">
         <div class="form-group">
-            <label>Pilih Tanggal Acara</label>
+            <label>Sélectionnez la date de l'événement</label>
             <input type="date" class="form-control">
         </div>
     </form>

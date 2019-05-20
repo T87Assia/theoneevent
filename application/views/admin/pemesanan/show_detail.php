@@ -5,17 +5,17 @@
     </div>
     <div class="panel-body">
       <center>
-        <h3 class="page-header">Détails de la commande de location <br> <small>Numéro de transaction #<?= $detail->id_pemesanan ?></small></h3>
+        <h3 class="page-header">Détails du location <br> <small>Numéro de la commande #<?= $detail->id_pemesanan ?></small></h3>
       </center>
       <div class="col-sm-6">
         <dl class="dl-horizontal">
           <dt>Nom</dt>
           <dd><?= $detail->nama; ?></dd>
-          <dt>Num GSM</dt>
+          <dt>GSM</dt>
           <dd><?= $detail->no_telp; ?></dd>
           <dt>Adresse</dt>
           <dd><?= $detail->alamat; ?></dd>
-          <dt>Tanggal Acara</dt>
+          <dt>Date d'événement</dt>
           <dd><?= nice_date($detail->tgl_acara,'d-m-Y'); ?></dd>
           <dt>Status</dt>
           <dd><label class="label <?= ($detail->status == "pending") ? 'label-default' : 'label-success' ?>"><?= $detail->status ?></label></dd>
@@ -34,13 +34,13 @@
           <tbody>
             <tr>
               <td>1</td>
-              <td> Location du local</td>
+              <td> local</td>
               <td><?= $detail->nama_gedung ?></td>
               <td>Dh <?= number_format($detail->harga_gedung,0,',','.') ?></td>
             </tr>
             <tr>
               <td>2</td>
-              <td> Décoration du local</td>
+              <td> Décoration</td>
               <td><?= $detail->nama_dekorasi ?></td>
               <td>Dh <?= number_format($detail->harga_dekorasi,0,',','.') ?></td>
             </tr>
@@ -76,7 +76,7 @@
     <div class="panel-footer">
       <?php if ($detail->status == 'pending'): ?>
         <form class="" action="<?= base_url() . 'admin/pemesanan/update/'. $detail->id_pemesanan ?>" method="post">
-          <button type="submit" class="btn btn-success">Set Active</button>
+          <button type="submit" class="btn btn-success">Commande actif</button>
         </form>
       <?php endif; ?>
     </div>

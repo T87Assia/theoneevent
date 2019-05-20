@@ -7,14 +7,14 @@
     <?php endif; ?>
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h4 class="panel-title"><i class="fa fa-envelope"></i> Données de la commande</h4>
+            <h4 class="panel-title"><i class="fa fa-envelope"></i> Commande</h4>
         </div>
         <div class="panel-body">
             <table class="table table-bordered table-striped table-hover">
                 <thead>
                     <tr>
-                        <th>Nom</th>
-                        <th>Code de transaction</th>
+                        <th>Num</th>
+                        <th>Code de la commande</th>
                         <th>Nom du client</th>
                         <th>Statut</th>
                         <th>Outils</th>
@@ -29,7 +29,7 @@
                             <td><?= $transaksi->nama ?></td>
                             <td><?= $transaksi->status ?></td>
                             <td width="10%">
-                                <a href="<?php echo base_url() . 'admin/pemesanan/detail/'.$transaksi->id_pemesanan; ?>" class="btn btn-xs btn-info" title="Lihat"><i class="fa fa-eye fa-fw"></i></a>
+                                <a href="<?php echo base_url() . 'admin/pemesanan/detail/'.$transaksi->id_pemesanan; ?>" class="btn btn-xs btn-info" title="Voir"><i class="fa fa-eye fa-fw"></i></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

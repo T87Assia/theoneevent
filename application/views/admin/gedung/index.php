@@ -7,7 +7,7 @@
     <?php endif; ?>
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h4 class="panel-title"><i class="fa fa-building"></i> Données du local</h4>
+            <h4 class="panel-title"><i class="fa fa-building"></i> Local</h4>
         </div>
         <div class="panel-body">
             <div class="tool-box">
@@ -16,7 +16,7 @@
             <table class="table table-bordered table-striped table-hover">
                 <thead>
                     <tr>
-                        <th>Non</th>
+                        <th>Num</th>
                         <th>Noms du local</th>
                         <th>Prix</th>
                         <th>Description</th>
@@ -29,11 +29,11 @@
                         <tr>
                             <td><?= $no++ ?></td>
                             <td><img src="<?= base_url() . 'uploads/' . $gedung->foto ?>" alt="" class="image-display"> <?= $gedung->nama_gedung ?></td>
-                            <td>Rp. <?= $gedung->harga_gedung ?></td>
+                            <td>Dh <?= $gedung->harga_gedung ?></td>
                             <td><?= $gedung->deskripsi ?></td>
                             <td width="10%">
                                 <a href="<?php echo base_url() . 'admin/gedung/edit/'.$gedung->gedung_id; ?>" class="btn btn-xs btn-info" title="Modifier"><i class="fa fa-pencil fa-fw"></i></a>
-                                <a href="<?php echo base_url() . 'admin/gedung/delete/'.$gedung->gedung_id; ?>" class="btn btn-xs btn-danger" title="Supprimer" onclick="return confirm('Anda yakin ingin menghapus data ini ?')"><i class="fa fa-trash fa-fw"></i></a>
+                                <a href="<?php echo base_url() . 'admin/gedung/delete/'.$gedung->gedung_id; ?>" class="btn btn-xs btn-danger" title="Supprimer" onclick="return confirm('Vous êtes sûr de vouloir supprimer ces données ?')"><i class="fa fa-trash fa-fw"></i></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

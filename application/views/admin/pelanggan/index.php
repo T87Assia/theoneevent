@@ -7,7 +7,7 @@
     <?php endif; ?>
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h4 class="panel-title"><i class="fa fa-male"></i> Données du client</h4>
+            <h4 class="panel-title"><i class="fa fa-male"></i> Client</h4>
         </div>
         <div class="panel-body">
             <div class="tool-box">
@@ -18,7 +18,7 @@
                     <tr>
                         <th>Num</th>
                         <th>Nom</th>
-                        <th>Num GSM</th>
+                        <th>GSM</th>
                         <th>Adresse</th>
                         <th>Email</th>
                         <th>Outils</th>
@@ -35,7 +35,7 @@
                             <td><?= $pelanggan->email ?></td>
                             <td width="10%">
                                 <a href="<?php echo base_url() . 'admin/pelanggan/edit/'.$pelanggan->pelanggan_id; ?>" class="btn btn-xs btn-info" title="Modifier"><i class="fa fa-pencil fa-fw"></i></a>
-                                <a href="<?php echo base_url() . 'admin/pelanggan/delete/'.$pelanggan->pelanggan_id; ?>" class="btn btn-xs btn-danger" title="Supprimer" onclick="return confirm('Anda yakin ingin menghapus data ini ?')"><i class="fa fa-trash fa-fw"></i></a>
+                                <a href="<?php echo base_url() . 'admin/pelanggan/delete/'.$pelanggan->pelanggan_id; ?>" class="btn btn-xs btn-danger" title="Supprimer" onclick="return confirm('Vous êtes sûr de vouloir supprimer ces données ?')"><i class="fa fa-trash fa-fw"></i></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

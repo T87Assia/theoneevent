@@ -7,7 +7,7 @@
     <?php endif; ?>
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h4 class="panel-title"><i class="fa fa-female"></i> Données du maquillage</h4>
+            <h4 class="panel-title"><i class="fa fa-female"></i> Maquillage</h4>
         </div>
         <div class="panel-body">
             <div class="tool-box">
@@ -31,11 +31,11 @@
                             <td><?= $no++ ?></td>
                             <td><img src="<?= base_url() . 'uploads/' . $rias->gambar; ?>" alt="" class="image-display"></td>
                             <td><?= $rias->nama_rias ?></td>
-                            <td>Rp <?= $rias->harga_rias ?></td>
+                            <td>Dh <?= $rias->harga_rias ?></td>
                             <td><?= $rias->deskripsi ?></td>
                             <td width="10%">
                                 <a href="<?php echo base_url() . 'admin/rias/edit/'.$rias->rias_id; ?>" class="btn btn-xs btn-info" title="Modifier"><i class="fa fa-pencil fa-fw"></i></a>
-                                <a href="<?php echo base_url() . 'admin/rias/delete/'.$rias->rias_id; ?>" class="btn btn-xs btn-danger" title="Supprimer" onclick="return confirm('Anda yakin ingin menghapus data ini ?')"><i class="fa fa-trash fa-fw"></i></a>
+                                <a href="<?php echo base_url() . 'admin/rias/delete/'.$rias->rias_id; ?>" class="btn btn-xs btn-danger" title="Supprimer" onclick="return confirm('Vous êtes sûr de vouloir supprimer ces données ?')"><i class="fa fa-trash fa-fw"></i></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

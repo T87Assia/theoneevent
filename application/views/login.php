@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Susi Wedding Organizer</title>
+    <title>THE ONE EVENT</title>
     <!--Bootstrap-->
     <link rel="stylesheet" href="<?php echo base_url() . 'assets/css/bootstrap.min.css'; ?>">
     <link rel="stylesheet" href="<?php echo base_url() . 'assets/css/admin-theme.css'; ?>">
@@ -26,26 +26,26 @@
             <?php endif; ?>
             <form action="<?= base_url() . 'login'; ?>" class="form" method="post">
                 <div class="col-sm-offset-4 col-sm-4">
-                    <h1 class="page-header"><center>Susi Wedding Organizer</center></h1>
+                    <h1 class="page-header"><center>THE ONE EVENT</center></h1>
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h4 class="panel-title"><center>Silahkan Login</center></h4>
+                            <h4 class="panel-title"><center>Veuillez vous connecter</center></h4>
                         </div>
                         <div class="panel-body">
                             <div class="form-group">
-                                <label>Username</label>
+                                <label>Nom d'utilisateur</label>
                                 <input type="email" class="form-control" name="email">
                             </div>
                             <div class="form-group">
-                                <label>Password</label>
+                                <label>Mot de passe</label>
                                 <input type="password" class="form-control" name="password">
                             </div>
                         </div>
                         <div class="panel-footer">
-                            <button type="submit" class="btn btn-primary">Login</button>
+                            <button type="submit" class="btn btn-primary">Connexion</button>
                         </div>
                     </div>
-                    <a href="<?= base_url(); ?>"> Kembali ke Homepage </a>
+                    <a href="<?= base_url(); ?>"> Retour à la page d'accueil </a>
                 </div>
             </form>
         </div>

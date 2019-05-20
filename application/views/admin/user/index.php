@@ -19,7 +19,7 @@
                         <th>Num</th>
                         <th>Nom d'utilisateur</th>
                         <th>Nom</th>
-                        <th>Num GSM</th>
+                        <th>GSM</th>
                         <th>Outils</th>
                     </tr>
                 </thead>
@@ -33,7 +33,7 @@
                             <td><?= $user->no_telp ?></td>
                             <td width="10%">
                                 <a href="<?php echo base_url() . 'admin/user/edit/'.$user->user_id; ?>" class="btn btn-xs btn-info" title="Modifier"><i class="fa fa-pencil fa-fw"></i></a>
-                                <a href="<?php echo base_url() . 'admin/user/delete/'.$user->user_id; ?>" class="btn btn-xs btn-danger" title="Supprimer" onclick="return confirm('Anda yakin ingin menghapus data ini ?')"><i class="fa fa-trash fa-fw"></i></a>
+                                <a href="<?php echo base_url() . 'admin/user/delete/'.$user->user_id; ?>" class="btn btn-xs btn-danger" title="Supprimer" onclick="return confirm('Vous êtes sûr de vouloir supprimer ces données ?')"><i class="fa fa-trash fa-fw"></i></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

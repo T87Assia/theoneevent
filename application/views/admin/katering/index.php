@@ -7,7 +7,7 @@
     <?php endif; ?>
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h4 class="panel-title"><i class="fa fa-cutlery"></i> Données du plat</h4>
+            <h4 class="panel-title"><i class="fa fa-cutlery"></i> Plat</h4>
         </div>
         <div class="panel-body">
             <div class="tool-box">
@@ -16,7 +16,7 @@
             <table class="table table-bordered table-striped table-hover">
                 <thead>
                     <tr>
-                        <th>Non</th>
+                        <th>Num</th>
                         <th>Type</th>
                         <th>Montant</th>
                         <th>Prix</th>
@@ -35,7 +35,7 @@
                             <td><?= $katering->deskripsi ?></td>
                             <td width="10%">
                                 <a href="<?php echo base_url() . 'admin/katering/edit/'.$katering->katering_id; ?>" class="btn btn-xs btn-info" title="Modifier"><i class="fa fa-pencil fa-fw"></i></a>
-                                <a href="<?php echo base_url() . 'admin/katering/delete/'.$katering->katering_id; ?>" class="btn btn-xs btn-danger" title="Supprimer" onclick="return confirm('Anda yakin ingin menghapus data ini ?')"><i class="fa fa-trash fa-fw"></i></a>
+                                <a href="<?php echo base_url() . 'admin/katering/delete/'.$katering->katering_id; ?>" class="btn btn-xs btn-danger" title="Supprimer" onclick="return confirm('Vous êtes sûr de vouloir supprimer ces données ?')"><i class="fa fa-trash fa-fw"></i></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
