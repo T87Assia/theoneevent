@@ -49,7 +49,7 @@
                         <a class="page-scroll" href="#services">Service</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#daftar">Inscription</a>
+                        <a class="page-scroll" href="#register">Inscription</a>
                     </li>
                     <li>
                         <a href="<?= base_url() . 'login'; ?>">Se connecter</a>
@@ -127,7 +127,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="daftar">
+    <section id="register">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">

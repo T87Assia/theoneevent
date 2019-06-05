@@ -33,7 +33,7 @@ class Login extends CI_Controller {
         if ($result == null) {
             $this->session->set_flashdata([
                 'email' => $username,
-                'errors' => 'Maaf username atau password tidak cocok, silahkan coba lagi'
+                'errors' => 'Désolé, le nom d\'utilisateur ou le mot de passe ne convient pas. Veuillez réessayer.'
             ]);
             redirect(base_url() . 'login');
         }

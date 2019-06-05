@@ -33,7 +33,7 @@
                         </div>
                         <div class="panel-body">
                             <div class="form-group">
-                                <label>Nom d'utilisateur</label>
+                                <label>Adresse email</label>
                                 <input type="email" class="form-control" name="email">
                             </div>
                             <div class="form-group">

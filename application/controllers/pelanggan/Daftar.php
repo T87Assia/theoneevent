@@ -37,7 +37,8 @@ class Daftar extends CI_Controller {
 
             // set session for loggin automatically
             $session = [
-                'user_id' => $getData->pelanggan_id,
+				'user_id' => $getData->pelanggan_id,
+                'nama' => $this->input->post('nama'),
                 'email' => $this->input->post('email'),
                 'password' => $password,
                 'role' => 'guest',

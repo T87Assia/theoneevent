@@ -16,7 +16,7 @@
                 <a href="#" class="navbar-brand">Panneau d'administration</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="<?= base_url() . 'admin/logout'; ?>">Sortir</a></li>
+                <li><a href="<?= base_url() . 'admin/logout'; ?>">Se déconnecter</a></li>
             </ul>
         </div>
     </nav>

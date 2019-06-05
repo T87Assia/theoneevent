@@ -17,7 +17,7 @@
                 <a href="#" class="navbar-brand">Panneau client</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="<?= base_url() . 'logout'; ?>">Sortir</a></li>
+                <li><a href="<?= base_url() . 'logout'; ?>">Se déconnecter</a></li>
             </ul>
         </div>
     </nav>

@@ -553,59 +553,59 @@ section h3.section-subheading {
 aside.clients img {
   margin: 50px auto;
 }
-section#daftar {
+section#register {
   background-color: #222222;
-  background-image: url('../img/map-image.png');
+  /* background-image: url('../img/map-image.png'); */
   background-position: center;
   background-repeat: no-repeat;
 }
-section#daftar .section-heading {
+section#register .section-heading {
   color: white;
 }
-section#daftar .form-group {
+section#register .form-group {
   margin-bottom: 25px;
 }
-section#daftar .form-group input,
-section#daftar .form-group textarea {
+section#register .form-group input,
+section#register .form-group textarea {
   padding: 20px;
 }
-section#daftar .form-group input.form-control {
+section#register .form-group input.form-control {
   height: auto;
 }
-section#daftar .form-group textarea.form-control {
+section#register .form-group textarea.form-control {
   height: 236px;
 }
-section#daftar .form-control:focus {
+section#register .form-control:focus {
   border-color: #fed136;
   box-shadow: none;
 }
-section#daftar ::-webkit-input-placeholder {
+section#register ::-webkit-input-placeholder {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   color: #bbbbbb;
 }
-section#daftar :-moz-placeholder {
+section#register :-moz-placeholder {
   /* Firefox 18- */
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   color: #eeeeee;
 }
-section#daftar ::-moz-placeholder {
+section#register ::-moz-placeholder {
   /* Firefox 19+ */
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   color: #eeeeee;
 }
-section#daftar :-ms-input-placeholder {
+section#register :-ms-input-placeholder {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   color: #eeeeee;
 }
-section#daftar .text-danger {
+section#register .text-danger {
   color: #e74c3c;
 }
 footer {

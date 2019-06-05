@@ -61,7 +61,7 @@
                             </div>
                             <div class="form-group">
                                 <div class="input-group">
-                                  <input type="text" name="date" class="form-control" value="<?= isset($date) ? $date : '' ?>" placeholder="Tanggal acara Anda">
+                                  <input type="text" name="date" class="form-control" value="<?= isset($date) ? $date : '' ?>" placeholder="La date de votre événement">
                                   <div class="input-group-btn">
                                     <button type="submit" class="btn btn-info"><i class="fa fa-eye"></i> Voir</button>
                                   </div>
