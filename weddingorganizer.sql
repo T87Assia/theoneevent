@@ -34,6 +34,12 @@ CREATE TABLE `dekorasi` (
   PRIMARY KEY (`dekorasi_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+INSERT INTO `dekorasi` (`dekorasi_id`, `nama_dekorasi`, `deskripsi`, `harga_dekorasi`, `foto`) VALUES
+(1, 'Table', 'Table', '1000', 'Table_01.jpg'),
+(2, 'Table', 'Table', '1000', 'Table_02.jpg'),
+(3, 'Table', 'Table', '1000', 'Table_03.jpg'),
+(4, 'Table', 'Table', '1000', 'Table_04.jpg'),
+(5, 'Table', 'Table', '1000', 'Table_05.jpg');
 
 
 # Dump of table dokumentasi
@@ -65,6 +71,10 @@ CREATE TABLE `gedung` (
   KEY `gedung_id` (`gedung_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+INSERT INTO `gedung` (`gedung_id`, `nama_gedung`, `deskripsi`, `harga_gedung`, `foto`) VALUES
+(1, 'Pavillon de reve', 'Pavillon de reve', '10000', 'Pavillon_de_reve.jpg'),
+(2, 'Riad El Asmar', 'Riad El Asmar', '10000', 'Riad_El_Asmar1.jpg'),
+(3, 'Ryad AL HAMRAA', 'Ryad AL HAMRAA', '10000', 'Ryad_AL_HAMRAA.jpg');
 
 
 # Dump of table katering
@@ -81,6 +91,8 @@ CREATE TABLE `katering` (
   PRIMARY KEY (`katering_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+INSERT INTO `katering` (`katering_id`, `nama_katering`, `deskripsi`, `jumlah`, `harga_katering`) VALUES
+(1, 'Amuses geul', 'Amuses geul', '1', '1000');
 
 
 # Dump of table konfirmasi
@@ -228,6 +240,9 @@ CREATE TABLE `rias` (
   PRIMARY KEY (`rias_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+INSERT INTO `rias` (`rias_id`, `nama_rias`, `gambar`, `deskripsi`, `harga_rias`) VALUES
+(1, 'Maquillage', 'Maquillage_001.jpg', 'Maquillage', '1000'),
+(2, 'Maquillage', 'Maquillage_002.jpg', 'Maquillage', '1000');
 
 
 # Dump of table users
@@ -250,7 +265,7 @@ LOCK TABLES `users` WRITE;
 
 INSERT INTO `users` (`user_id`, `name`, `username`, `no_telp`, `password`)
 VALUES
-	(1,'admin','admin','','21232f297a57a5a743894a0e4a801fc3');
+	(1,'admin','admin','','admin');
 
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
