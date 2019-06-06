@@ -54,7 +54,7 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['admin'] = 'admin/dashboard';
-$route['pelanggan'] = 'pelanggan/dashboard';
+$route['dashboard'] = 'pelanggan/dashboard';
 
 $route['daftar'] = 'pelanggan/daftar/store';
 $route['logout'] = 'pelanggan/daftar/logout';

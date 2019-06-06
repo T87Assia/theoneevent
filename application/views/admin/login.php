@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
     <link rel="stylesheet" href="<?php echo base_url() . 'assets/css/bootstrap.min.css' ?>">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href="assets/css/custom-fonts.css" rel="stylesheet">
     <style>
         body {background:#f9f9f9 url(<?php echo base_url() . "assets/images/bg-cover.jpg"; ?>);background-size:cover;padding-top:100px;min-height:100vh;}
         .box {background:rgba(255,255,255,0.5);padding:20px;box-shadow: 1px 1px 7px 0px #555;border-radius:2px;}

@@ -52,7 +52,7 @@
                   <div class="panel panel-info">
                       <div class="panel-heading"><i class="fa fa-calendar"></i> Planifiez vos événements</div>
                       <div class="panel-body">
-                          <form class="" action="<?= base_url() . 'pelanggan?date=' . $date; ?>" method="get">
+                          <form class="" action="<?= base_url() . 'dashboard?date=' . $date; ?>" method="get">
                             <div class="alert alert-warning">
                               <ul>
                                 <li>Sélectionnez votre calendrier d'événements et cliquez sur le bouton d'affichage pour voir la disponibilité de nos services à cette date</li>

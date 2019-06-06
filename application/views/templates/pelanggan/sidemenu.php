@@ -8,7 +8,7 @@
             <h3 class="panel-title"><i class="fa fa-list"></i> Menu principal</h3>
         </div>
         <div class="list-group">
-            <a href="<?= base_url() . 'pelanggan/'; ?>" class="list-group-item <?= ($uri == '') ? 'active' : ''; ?>"><i class="fa fa-dashboard fa-fw"></i> Tableau de bord</a>
+            <a href="<?= base_url() . 'dashboard/'; ?>" class="list-group-item <?= ($uri == '') ? 'active' : ''; ?>"><i class="fa fa-dashboard fa-fw"></i> Tableau de bord</a>
             <a href="<?= base_url() . 'pelanggan/konfirmasi'; ?>" class="list-group-item <?= ($uri == 'konfirmasi') ? 'active' : ''; ?>"><i class="fa fa-money fa-fw"></i> Confirmation de paiement</a>
         </div>
     </div>

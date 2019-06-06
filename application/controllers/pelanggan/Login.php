@@ -9,7 +9,7 @@ class Login extends CI_Controller {
         parent::__construct();
         // Jika sudah login akan di alihkan ke halaman dashboard pelaggan
         if ($this->session->userdata('validate') != null) {
-            redirect(base_url() . 'pelanggan');
+            redirect(base_url() . 'dashboard');
         }
     }
 
@@ -46,7 +46,7 @@ class Login extends CI_Controller {
                 'password' => $result->password,
                 'validate' => true
             ]);
-            redirect(base_url() . 'pelanggan');
+            redirect(base_url() . 'dashboard');
         }
     }
 

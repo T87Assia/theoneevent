@@ -56,7 +56,7 @@ class Konfirmasi extends My_Controller {
 
         // REDIRECT TO USER PAGE
         $this->session->set_flashdata('success','Konfirmasi berhasil dilakukan!');
-        redirect(base_url() . 'pelanggan/');
+        redirect(base_url() . 'dashboard/');
     }
 
 }

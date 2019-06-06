@@ -47,7 +47,7 @@ class Daftar extends CI_Controller {
             $this->session->set_userdata($session);
 
             // redirect to dashboard
-            redirect(base_url() . 'pelanggan');
+            redirect(base_url() . 'dashboard');
         }
     }
 

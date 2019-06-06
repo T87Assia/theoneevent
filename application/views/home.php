@@ -15,11 +15,8 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link href="assets/css/custom-fonts.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Theme CSS -->
     <link href="assets/css/style.css" rel="stylesheet">
@@ -186,26 +183,26 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-4">
+                <!-- <div class="col-md-4">
                     <ul class="list-inline quicklinks">
                         <li><a href="#">Politique de confidentialité</a>
                         </li>
                         <li><a href="#">Conditions d'utilisation</a>
                         </li>
                     </ul>
-                </div>
+                </div> -->
             </div>
         </div>
     </footer>
 
     <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="assets/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
 
     <!-- Contact Form JavaScript -->
     <script src="assets/js/jqBootstrapValidation.js"></script>

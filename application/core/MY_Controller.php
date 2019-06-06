@@ -35,7 +35,7 @@ class Admin_Controller extends CI_Controller
             redirect(base_url() . "admin/login");
         }
         elseif ($this->session->userdata('role') == 'guest') {
-            redirect(base_url() . 'pelanggan');
+            redirect(base_url() . 'dashboard');
         }
     }
 }
