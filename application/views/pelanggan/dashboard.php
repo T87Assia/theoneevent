@@ -98,7 +98,7 @@
                                                         <img src="<?= base_url() . 'uploads/' . $gedung->foto; ?>" alt="" class="gambar-gedung">
                                                         <div class="caption">
                                                             <h4><?= $gedung->nama_gedung; ?></h4>
-                                                            <p class="price">Dh <?= number_format($gedung->harga_gedung,0,',','.'); ?></p>
+                                                            <p class="price"><?= number_format($gedung->harga_gedung,0,',','.'); ?> Dh</p>
                                                             <p class="alamat"><?= $gedung->deskripsi; ?></p>
                                                         </div>
                                                     </div>
@@ -124,7 +124,7 @@
                                                           <img src="<?= base_url() . 'uploads/' . $dekorasi->foto; ?>" alt="" class="gambar-gedung">
                                                           <div class="caption">
                                                               <h4><?= $dekorasi->nama_dekorasi; ?></h4>
-                                                              <p class="price">Dh <?= number_format($dekorasi->harga_dekorasi,0,',','.'); ?></p>
+                                                              <p class="price"><?= number_format($dekorasi->harga_dekorasi,0,',','.'); ?> Dh</p>
                                                               <p class="alamat"><?= $dekorasi->deskripsi; ?></p>
                                                           </div>
                                                       </div>
@@ -149,7 +149,7 @@
                                                         <img src="<?= base_url() . 'uploads/' . $rias->gambar; ?>" alt="" class="gambar-gedung">
                                                         <div class="caption">
                                                             <h4><?= $rias->nama_rias; ?></h4>
-                                                            <p class="price">Dh <?= number_format($rias->harga_rias,0,',','.'); ?></p>
+                                                            <p class="price"><?= number_format($rias->harga_rias,0,',','.'); ?> Dh</p>
                                                             <p class="alamat"><?= $rias->deskripsi; ?></p>
                                                         </div>
                                                     </div>
@@ -171,7 +171,7 @@
                                                       <!-- <img src="<?= base_url() . 'uploads/' . $katering->gambar; ?>" alt="" class="gambar-gedung"> -->
                                                       <div class="caption">
                                                           <h4><?= $katering->nama_katering; ?></h4>
-                                                          <p class="price">Dh <?= number_format($katering->harga_katering,0,',','.'); ?></p>
+                                                          <p class="price"><?= number_format($katering->harga_katering,0,',','.'); ?> Dh</p>
                                                           <p class="alamat"><?= $katering->deskripsi; ?></p>
                                                       </div>
                                                   </div>
@@ -193,7 +193,7 @@
                                                       <!-- <img src="<?= base_url() . 'uploads/' . $dokumentasi->gambar; ?>" alt="" class="gambar-gedung"> -->
                                                       <div class="caption">
                                                           <h4><?= $dokumentasi->nama_dokumentasi; ?></h4>
-                                                          <p class="price">Dh <?= number_format($dokumentasi->harga_dokumentasi,0,',','.'); ?></p>
+                                                          <p class="price"><?= number_format($dokumentasi->harga_dokumentasi,0,',','.'); ?> Dh</p>
                                                           <p class="alamat"><?= $dokumentasi->deskripsi; ?></p>
                                                       </div>
                                                   </div>

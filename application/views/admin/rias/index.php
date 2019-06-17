@@ -31,7 +31,7 @@
                             <td><?= $no++ ?></td>
                             <td><img src="<?= base_url() . 'uploads/' . $rias->gambar; ?>" alt="" class="image-display"></td>
                             <td><?= $rias->nama_rias ?></td>
-                            <td>Dh <?= $rias->harga_rias ?></td>
+                            <td><?= $rias->harga_rias ?> Dh</td>
                             <td><?= $rias->deskripsi ?></td>
                             <td width="10%">
                                 <a href="<?php echo base_url() . 'admin/rias/edit/'.$rias->rias_id; ?>" class="btn btn-xs btn-info" title="Modifier"><i class="fa fa-pencil fa-fw"></i></a>

@@ -36,38 +36,38 @@
               <td>1</td>
               <td> Location du local</td>
               <td><?= $detail->nama_gedung ?></td>
-              <td>Dh <?= number_format($detail->harga_gedung,0,',','.') ?></td>
+              <td><?= number_format($detail->harga_gedung,0,',','.') ?> Dh</td>
             </tr>
             <tr>
               <td>2</td>
               <td> Décoration du local</td>
               <td><?= $detail->nama_dekorasi ?></td>
-              <td>Dh <?= number_format($detail->harga_dekorasi,0,',','.') ?></td>
+              <td><?= number_format($detail->harga_dekorasi,0,',','.') ?> Dh</td>
             </tr>
             <tr>
               <td>3</td>
               <td> Maquillage</td>
               <td><?= $detail->nama_rias ?></td>
-              <td>Dh <?= number_format($detail->harga_rias,0,',','.') ?></td>
+              <td><?= number_format($detail->harga_rias,0,',','.') ?> Dh</td>
             </tr>
             <tr>
               <td>4</td>
               <td> Restauration</td>
               <td><?= $detail->nama_katering ?></td>
-              <td>Dh <?= number_format($detail->harga_katering,0,',','.') ?></td>
+              <td><?= number_format($detail->harga_katering,0,',','.') ?> Dh</td>
             </tr>
             <tr>
               <td>5</td>
               <td> Immortalisation</td>
               <td><?= $detail->nama_dokumentasi ?></td>
-              <td>Dh <?= number_format($detail->harga_dokumentasi,0,',','.') ?></td>
+              <td><?= number_format($detail->harga_dokumentasi,0,',','.') ?> Dh</td>
             </tr>
             <tr>
               <th colspan="3">Total</th>
               <?php
                 $total = $detail->harga_gedung + $detail->harga_dekorasi + $detail->harga_katering + $detail->harga_rias + $detail->harga_dokumentasi;
               ?>
-              <td>Dh <?= number_format($total,0,',','.') ?></td>
+              <td><?= number_format($total,0,',','.') ?> Dh</td>
             </tr>
           </tbody>
         </table>

@@ -29,7 +29,7 @@
                         <tr>
                             <td><?= $no++ ?></td>
                             <td><img src="<?= base_url() . 'uploads/' . $gedung->foto ?>" alt="" class="image-display"> <?= $gedung->nama_gedung ?></td>
-                            <td>Dh <?= $gedung->harga_gedung ?></td>
+                            <td><?= $gedung->harga_gedung ?> Dh</td>
                             <td><?= $gedung->deskripsi ?></td>
                             <td width="10%">
                                 <a href="<?php echo base_url() . 'admin/gedung/edit/'.$gedung->gedung_id; ?>" class="btn btn-xs btn-info" title="Modifier"><i class="fa fa-pencil fa-fw"></i></a>
