@@ -7,7 +7,7 @@
     <title><?= ($this->session->flashdata('role') == 'admin') ? 'Admin' : 'Guest' ?> | Tableau de bord</title>
     <link rel="stylesheet" href="<?php echo base_url() . 'assets/css/bootstrap.min.css'; ?>">
     <link rel="stylesheet" href="<?php echo base_url() . 'assets/css/admin-theme.css'; ?>">
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo base_url() . 'assets/css/font-awesome.min.css'; ?>" >
 </head>
 <body>
     <nav class="navbar navbar-default">
