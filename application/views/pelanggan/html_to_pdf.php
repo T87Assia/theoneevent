@@ -1,14 +1,12 @@
-<div class="col-sm-9">
-  <div class="panel panel-default">
+<div class="panel panel-default">
     <div class="panel-heading">
-      <h4 class="panel-title"><i class="fa fa-list-alt"></i> Votre commande : <a class="pull-right" href="<?= base_url() . 'pelanggan/invoice?id=' . $detail->id_pemesanan ?>">Enregistrer en format PDF</a></h4>
-			
+      <h4 class="panel-title"><i class="fa fa-list-alt"></i> Votre commande :</h4>
     </div>
     <div class="panel-body">
       <center>
         <h3 class="page-header">Détails du location <br> <small>Numéro de la commande #<?= $detail->id_pemesanan ?></small></h3>
       </center>
-      <div class="col-sm-6">
+      <div class="col-sm-12">
         <dl class="dl-horizontal">
           <dt>Nom</dt>
           <dd><?= $detail->nama; ?></dd>
@@ -74,8 +72,4 @@
         </table>
       </div>
     </div>
-    <div class="panel-footer">
-
-    </div>
   </div>
-</div>

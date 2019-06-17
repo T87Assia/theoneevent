@@ -143,15 +143,23 @@
                                     <p class="help-block text-danger"><?php echo $this->session->flashdata('nama'); ?></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="no_telp" class="form-control" placeholder="GSM *" value="<?php echo set_value('nama',isset($pelanggan->nama) ? $pelanggan->nama : ''); ?>">
+                                    <input type="text" name="no_telp" class="form-control" placeholder="GSM *" value="<?php echo set_value('nama',isset($pelanggan->no_telp) ? $pelanggan->no_telp : ''); ?>">
                                     <p class="help-block text-danger"><?php echo $this->session->flashdata('no_telp'); ?></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" name="email" class="form-control" placeholder="Email *" id="email" value="<?php echo set_value('nama',isset($pelanggan->nama) ? $pelanggan->nama : ''); ?>" required>
+                                    <input type="email" name="email" class="form-control" placeholder="Email *" id="email" value="<?php echo set_value('nama',isset($pelanggan->email) ? $pelanggan->email : ''); ?>" required>
                                     <p class="help-block text-danger"><?php echo $this->session->flashdata('email'); ?></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="alamat" class="form-control" placeholder="Adresse *" value="<?php echo set_value('nama',isset($pelanggan->nama) ? $pelanggan->nama : ''); ?>" required>
+                                    <input type="password" name="password" class="form-control" placeholder="Mot de passe *" id="password" required>
+                                    <p class="help-block text-danger"><?php echo $this->session->flashdata('password'); ?></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="confirm_password" class="form-control" placeholder="Confirmer le mot de passe *" id="confirm_password" required>
+                                    <p class="help-block text-danger"><?php echo $this->session->flashdata('confirm_password'); ?></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="alamat" class="form-control" placeholder="Adresse *" value="<?php echo set_value('nama',isset($pelanggan->alamat) ? $pelanggan->alamat : ''); ?>" required>
                                     <p class="help-block text-danger"><?php echo $this->session->flashdata('alamat'); ?></p>
                                 </div>
                             </div>
@@ -198,6 +206,9 @@
     <!-- jQuery -->
     <script src="assets/js/jquery.min.js"></script>
 
+    <!-- jQuery -->
+    <script src="assets/js/hideShowPassword.min.js"></script>
+
     <!-- Bootstrap Core JavaScript -->
     <script src="assets/js/bootstrap.min.js"></script>
 
@@ -209,6 +220,13 @@
 
     <!-- Theme JavaScript -->
     <script src="assets/js/agency.min.js"></script>
+
+	<script>
+		$('#password, #confirm_password').showPassword('focus', {
+			show: false,
+			toggle: { className: 'btn btn-primary', styles: { position: 'absolute', 'margin-right': '12px' } }			
+		});
+	</script>
 
 </body>
 

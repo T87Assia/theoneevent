@@ -37,7 +37,9 @@
                         <?php if (isset($transaksi) and count($transaksi) != null): ?>
                                 Vous avez <?= count($transaksi) ?> Ordre : <br>
                                 <ul class="list-unstyled">
-                                  <li><a href="<?= base_url() . 'lihat/transaksi/' . $transaksi->id_pemesanan ?>" target="_blank" >Sur <?= nice_date($transaksi->tgl_acara,'d-m-Y') ?> <small><span class="glyphicon glyphicon-new-window"></span></small></a></li>
+																	<?php foreach($transaksi as $trans): ?>
+  	                                <li><a href="<?= base_url() . 'lihat/transaksi/' . $trans->id_pemesanan ?>" target="_blank" >Sur <?= nice_date($trans->tgl_acara,'d-m-Y') ?> <small><span class="glyphicon glyphicon-new-window"></span></small></a></li>
+																	<?php endforeach; ?>
                                 </ul>
                         <?php else: ?>
                               Vous n'avez pas de transaction

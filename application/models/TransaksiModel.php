@@ -15,7 +15,7 @@ class TransaksiModel extends CI_Model {
   public function myTransaction()
   {
     $this->db->where('user_id',$this->session->userdata('user_id'));
-    return $this->db->get('pemesanan')->row();
+		return $this->db->get('pemesanan')->result();
   }
 
   public function simpanTransaksi($data)
