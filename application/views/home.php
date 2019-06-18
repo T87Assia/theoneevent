@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>THE ONE EVENT | Organisateur des événements</title>
+	<title>THE ONE EVENT | Organisation de mariage Haut de gamme</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -111,6 +111,7 @@
                     <h4 class="service-heading">Maquillage</h4>
                     <p class="text-muted">Devenez le roi et la reine de votre événement avec le meilleur maquillage de nos meilleurs maquilleurs</p>
                 </div>
+                <div class="col-md-4"></div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
@@ -178,27 +179,9 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; Your Website 2019</span>
+                <div class="col-md-12">
+                    <div class="text-center copyright">Copyright © 2019 - THE ONE EVENT</div>
                 </div>
-                <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- <div class="col-md-4">
-                    <ul class="list-inline quicklinks">
-                        <li><a href="#">Politique de confidentialité</a>
-                        </li>
-                        <li><a href="#">Conditions d'utilisation</a>
-                        </li>
-                    </ul>
-                </div> -->
             </div>
         </div>
     </footer>
