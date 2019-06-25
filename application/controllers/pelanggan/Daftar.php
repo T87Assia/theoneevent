@@ -26,7 +26,7 @@ class Daftar extends CI_Controller {
                 'no_telp' => $this->input->post('no_telp'),
                 'alamat' => $this->input->post('alamat'),
                 'email' => $this->input->post('email'),
-                'password' => $this->input->post('password'),
+                'password' => md5($this->input->post('password')),
             );
 
             // INSERT INTO DATABASE

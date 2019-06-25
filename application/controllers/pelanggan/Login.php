@@ -25,7 +25,7 @@ class Login extends CI_Controller {
 
         $data = $this->db->get_where('pelanggan',[
             'email' => $username,
-            'password' => $password
+            'password' => md5($password)
         ]);
 
         $result = $data->row();
