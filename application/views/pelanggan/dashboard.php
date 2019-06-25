@@ -22,8 +22,8 @@
                     </div>
                     <div class="panel-body">
                         <ul class="list-unstyled">
-                            <li><strong>Nom d'utilisateur</strong> : Utilisez votre email</li>
-                            <li><strong>Mot de passe</strong> : <?= $this->session->userdata('password') ?></li>
+                            <li><strong>Nom d'utilisateur</strong> : <?= $this->session->userdata('email') ?></li>
+                            <li><strong>Mot de passe</strong> : Utilisez votre mot de passe</li>
                         </ul>
                     </div>
                 </div>
