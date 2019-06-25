@@ -27,10 +27,10 @@
                 )
             ));
             $this->dbforge->add_key('dekorasi_id',TRUE);
-            $this->dbforge->create_table('dekorasi');
+            $this->dbforge->create_table('decoration');
         }
 
         public function down() {
-            $this->dbforge->drop_table('dekorasi');
+            $this->dbforge->drop_table('decoration');
         }
     }

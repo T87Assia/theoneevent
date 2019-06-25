@@ -23,18 +23,18 @@
 # Dump of table dekorasi
 # ------------------------------------------------------------
 
-DROP TABLE IF EXISTS `dekorasi`;
+DROP TABLE IF EXISTS `decoration`;
 
-CREATE TABLE `dekorasi` (
+CREATE TABLE `decoration` (
   `dekorasi_id` int(11) NOT NULL AUTO_INCREMENT,
   `nama_dekorasi` varchar(15) NOT NULL,
-  `deskripsi` varchar(255) NOT NULL,
+  `deskripsi` TEXT NOT NULL,
   `harga_dekorasi` decimal(11,0) NOT NULL,
   `foto` varchar(255) NOT NULL,
   PRIMARY KEY (`dekorasi_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `dekorasi` (`dekorasi_id`, `nama_dekorasi`, `deskripsi`, `harga_dekorasi`, `foto`) VALUES
+INSERT INTO `decoration` (`dekorasi_id`, `nama_dekorasi`, `deskripsi`, `harga_dekorasi`, `foto`) VALUES
 (1, 'Table', 'Table', '1000', 'Table_01.jpg'),
 (2, 'Table', 'Table', '1000', 'Table_02.jpg'),
 (3, 'Table', 'Table', '1000', 'Table_03.jpg'),
@@ -50,7 +50,7 @@ DROP TABLE IF EXISTS `dokumentasi`;
 CREATE TABLE `dokumentasi` (
   `dokumentasi_id` int(11) NOT NULL AUTO_INCREMENT,
   `nama_dokumentasi` varchar(255) NOT NULL,
-  `deskripsi` varchar(255) NOT NULL,
+  `deskripsi` TEXT NOT NULL,
   `harga_dokumentasi` decimal(11,0) NOT NULL,
   PRIMARY KEY (`dokumentasi_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -65,7 +65,7 @@ DROP TABLE IF EXISTS `gedung`;
 CREATE TABLE `gedung` (
   `gedung_id` int(5) unsigned NOT NULL AUTO_INCREMENT,
   `nama_gedung` varchar(35) NOT NULL,
-  `deskripsi` varchar(255) NOT NULL,
+  `deskripsi` TEXT NOT NULL,
   `harga_gedung` decimal(11,0) NOT NULL,
   `foto` varchar(255) NOT NULL,
   KEY `gedung_id` (`gedung_id`)
@@ -85,7 +85,7 @@ DROP TABLE IF EXISTS `katering`;
 CREATE TABLE `katering` (
   `katering_id` int(11) NOT NULL AUTO_INCREMENT,
   `nama_katering` varchar(25) NOT NULL,
-  `deskripsi` varchar(255) NOT NULL,
+  `deskripsi` TEXT NOT NULL,
   `jumlah` decimal(5,0) NOT NULL,
   `harga_katering` decimal(11,0) NOT NULL,
   PRIMARY KEY (`katering_id`)
@@ -135,7 +135,7 @@ CREATE TABLE `pelanggan` (
   `no_telp` varchar(12) NOT NULL,
   `alamat` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `password` varchar(11) NOT NULL DEFAULT '',
+  `password` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`pelanggan_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -235,7 +235,7 @@ CREATE TABLE `rias` (
   `rias_id` int(11) NOT NULL AUTO_INCREMENT,
   `nama_rias` varchar(50) NOT NULL,
   `gambar` varchar(255) NOT NULL,
-  `deskripsi` varchar(255) NOT NULL,
+  `deskripsi` TEXT NOT NULL,
   `harga_rias` decimal(11,0) NOT NULL,
   PRIMARY KEY (`rias_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

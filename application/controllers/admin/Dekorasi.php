@@ -15,7 +15,7 @@ class Dekorasi extends Admin_Controller {
 
     public function index()
     {
-        $data['dekor'] = $this->db->get('dekorasi');
+        $data['dekor'] = $this->db->get('decoration');
 
         $this->template('index',$data);
     }
@@ -64,7 +64,7 @@ class Dekorasi extends Admin_Controller {
             $data['foto'] = $this->upload->data('file_name');
 
             // INSERT INTO DATABASE
-            $this->db->insert('dekorasi',$data);
+            $this->db->insert('decoration',$data);
 
             // REDIRECT TO USER PAGE
             $this->session->set_flashdata('success','Data berhasil disimpan!');
@@ -80,7 +80,7 @@ class Dekorasi extends Admin_Controller {
         }
 
         // mengambil data dari table user berdasarkan id
-        $result = $this->db->get_where('dekorasi',['dekorasi_id' => $id]);
+        $result = $this->db->get_where('decoration',['dekorasi_id' => $id]);
         $data['dekorasi'] = $result->row();
         $this->template('edit',$data);
     }
@@ -115,7 +115,7 @@ class Dekorasi extends Admin_Controller {
 
             // INSERT INTO DATABASE
             $this->db->where('dekorasi_id',$id);
-            $this->db->update('dekorasi',$data);
+            $this->db->update('decoration',$data);
 
             // REDIRECT TO USER PAGE
             $this->session->set_flashdata('success','Data berhasil diperbarui!');
@@ -125,14 +125,14 @@ class Dekorasi extends Admin_Controller {
 
     public function delete($id)
     {
-        $data = $this->db->get_where('dekorasi',['dekorasi_id' => $id])->row();
+        $data = $this->db->get_where('decoration',['dekorasi_id' => $id])->row();
 
         // DELETING IMAGE
         if ($data->foto != '') {
           unlink('uploads/' . $data->foto);
         }
 
-        $this->db->delete('dekorasi',['dekorasi_id' => $id]);
+        $this->db->delete('decoration',['dekorasi_id' => $id]);
 
         $this->session->set_flashdata('success','Data berhasil dihapus!');
         redirect(base_url() . 'admin/dekorasi/');
