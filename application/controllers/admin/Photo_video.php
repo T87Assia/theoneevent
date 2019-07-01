@@ -1,11 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Dokumentasi extends Admin_Controller {
+class Photo_video extends Admin_Controller {
 
     public function index()
     {
-        $data['dok'] = $this->db->get('dokumentasi');
+        $data['dok'] = $this->db->get('Photo_video');
 
         $this->template('index',$data);
     }
@@ -14,14 +14,14 @@ class Dokumentasi extends Admin_Controller {
     {
         $this->load->view('templates/admin/header');
         $this->load->view('templates/admin/sidemenu');
-        $this->load->view('admin/dokumentasi/'.$template,$data);
+        $this->load->view('admin/Photo_video/'.$template,$data);
         $this->load->view('templates/admin/footer');
     }
 
     private function validation() {
-        $this->form_validation->set_rules('nama_dokumentasi','Nama Dokumentasi','required');
+        $this->form_validation->set_rules('nama_Photo_video','Nama Photo_video','required');
         $this->form_validation->set_rules('deskripsi','Deskripsi','required');
-        $this->form_validation->set_rules('harga_dokumentasi','Harga','required|numeric');
+        $this->form_validation->set_rules('harga_Photo_video','Harga','required|numeric');
     }
 
     public function create()
@@ -38,17 +38,17 @@ class Dokumentasi extends Admin_Controller {
             return;
         } else {
             $data = array(
-                'nama_dokumentasi' => $this->input->post('nama_dokumentasi'),
+                'nama_Photo_video' => $this->input->post('nama_Photo_video'),
                 'deskripsi' => $this->input->post('deskripsi'),
-                'harga_dokumentasi' => $this->input->post('harga_dokumentasi')
+                'harga_Photo_video' => $this->input->post('harga_Photo_video')
             );
 
             // INSERT INTO DATABASE
-            $this->db->insert('dokumentasi',$data);
+            $this->db->insert('Photo_video',$data);
 
             // REDIRECT TO USER PAGE
             $this->session->set_flashdata('success','Données sauvegardées avec succès!');
-            redirect(base_url() . 'admin/dokumentasi/');
+            redirect(base_url() . 'admin/Photo_video/');
         }
     }
 
@@ -56,12 +56,12 @@ class Dokumentasi extends Admin_Controller {
     {
         // jika id tidak ada maka halaman akan dialihkan
         if ($id == null) {
-            redirect(base_url() . 'admin/dokumentasi');
+            redirect(base_url() . 'admin/Photo_video');
         }
 
         // mengambil data dari table user berdasarkan id
-        $result = $this->db->get_where('dokumentasi',['dokumentasi_id' => $id]);
-        $data['dokumentasi'] = $result->row();
+        $result = $this->db->get_where('Photo_video',['Photo_video_id' => $id]);
+        $data['Photo_video'] = $result->row();
         $this->template('edit',$data);
     }
 
@@ -74,28 +74,28 @@ class Dokumentasi extends Admin_Controller {
             return;
         } else {
             $data = array(
-                'nama_dokumentasi' => $this->input->post('nama_dokumentasi'),
+                'nama_Photo_video' => $this->input->post('nama_Photo_video'),
                 'deskripsi' => $this->input->post('deskripsi'),
-                'harga_dokumentasi' => $this->input->post('harga_dokumentasi')
+                'harga_Photo_video' => $this->input->post('harga_Photo_video')
             );
 
             // INSERT INTO DATABASE
-            $this->db->where('dokumentasi_id',$id);
-            $this->db->update('dokumentasi',$data);
+            $this->db->where('Photo_video_id',$id);
+            $this->db->update('Photo_video',$data);
 
             // REDIRECT TO USER PAGE
             $this->session->set_flashdata('success','Données mises à jour avec succès!');
-            redirect(base_url() . 'admin/dokumentasi/');
+            redirect(base_url() . 'admin/Photo_video/');
         }
     }
 
     public function delete($id)
     {
-        $this->db->where('dokumentasi_id',$id);
-        $this->db->delete('dokumentasi');
+        $this->db->where('Photo_video_id',$id);
+        $this->db->delete('Photo_video');
 
         $this->session->set_flashdata('success','Données supprimées avec succès!');
-        redirect(base_url() . 'admin/dokumentasi/');
+        redirect(base_url() . 'admin/Photo_video/');
     }
 }
 

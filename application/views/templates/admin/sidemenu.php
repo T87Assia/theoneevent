@@ -12,7 +12,7 @@
             <a href="<?= base_url() . 'admin/gedung'; ?>" class="list-group-item <?= ($uri == 'gedung') ? 'active' : ''; ?>"><i class="fa fa-building-o fa-fw"></i> Local</a>
             <a href="<?= base_url() . 'admin/dekorasi'; ?>" class="list-group-item <?= ($uri == 'dekorasi') ? 'active' : ''; ?>"><i class="fa fa-diamond fa-fw"></i> Déco et Animation</a>
             <a href="<?= base_url() . 'admin/katering'; ?>" class="list-group-item <?= ($uri == 'katering') ? 'active' : ''; ?>"><i class="fa fa-cutlery fa-fw"></i> Restauration</a>
-            <a href="<?= base_url() . 'admin/dokumentasi'; ?>" class="list-group-item <?= ($uri == 'dokumentasi') ? 'active' : ''; ?>"><i class="fa fa-camera-retro fa-fw"></i> Photo video</a>
+            <a href="<?= base_url() . 'admin/Photo_video'; ?>" class="list-group-item <?= ($uri == 'Photo_video') ? 'active' : ''; ?>"><i class="fa fa-camera-retro fa-fw"></i> Photo video</a>
             <a href="<?= base_url() . 'admin/Mis_en_beaute'; ?>" class="list-group-item <?= ($uri == 'Mis_en_beaute') ? 'active' : ''; ?>"><i class="fa fa-female fa-fw"></i> Mise en beauté</a>
             <a href="<?= base_url() . 'admin/user'; ?>" class="list-group-item <?= ($uri == 'user') ? 'active' : ''; ?>"><i class="fa fa-user fa-fw"></i> Données utilisateur</a>
         </div>

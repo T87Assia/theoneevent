@@ -83,7 +83,7 @@
                                       <li role="presentation"><a href="#dekorasi" aria-controls="dekorasi" role="tab" data-toggle="tab"><i class="fa fa-diamond fa-fw"></i>  Choisissez la Déco et Animation</a></li>
                                       <li role="presentation"><a href="#Mis_en_beaute" aria-controls="Mis_en_beaute" role="tab" data-toggle="tab"><i class="fa fa-female fa-fw"></i>  Choisissez le Mise en beauté</a></li>
                                       <li role="presentation"><a href="#katering" aria-controls="katering" role="tab" data-toggle="tab"><i class="fa fa-cutlery fa-fw"></i>  Choisissez les plats</a></li>
-                                      <li role="presentation"><a href="#dokumentasi" aria-controls="dokumentasi" role="tab" data-toggle="tab"><i class="fa fa-camera-retro fa-fw"></i>  Choisissez la photo video</a></li>
+                                      <li role="presentation"><a href="#Photo_video" aria-controls="Photo_video" role="tab" data-toggle="tab"><i class="fa fa-camera-retro fa-fw"></i>  Choisissez la photo video</a></li>
                                   </ul>
 
                                   <!-- Tab panes -->
@@ -184,19 +184,19 @@
                                     </div>
                                     <!-- End of Katering -->
 
-                                    <!-- Dokumentasi -->
-                                    <div role="tabpanel" class="tab-pane" id="dokumentasi">
+                                    <!-- Photo_video -->
+                                    <div role="tabpanel" class="tab-pane" id="Photo_video">
                                       <div class="row">
-                                        <?php foreach ($this->db->get('dokumentasi')->result() as $dokumentasi): ?>
+                                        <?php foreach ($this->db->get('Photo_video')->result() as $Photo_video): ?>
                                           <div class="col-sm-4">
                                               <label class="option">
                                                   <div class="thumbnail">
-                                                      <input type="radio" name="dokumentasi" value="<?= $dokumentasi->dokumentasi_id ?>">
-                                                      <!-- <img src="<?= base_url() . 'uploads/' . $dokumentasi->gambar; ?>" alt="" class="gambar-gedung"> -->
+                                                      <input type="radio" name="Photo_video" value="<?= $Photo_video->Photo_video_id ?>">
+                                                      <!-- <img src="<?= base_url() . 'uploads/' . $Photo_video->gambar; ?>" alt="" class="gambar-gedung"> -->
                                                       <div class="caption">
-                                                          <h4><?= $dokumentasi->nama_dokumentasi; ?></h4>
-                                                          <p class="price"><?= number_format($dokumentasi->harga_dokumentasi,0,',','.'); ?> Dh</p>
-                                                          <p class="alamat"><?= $dokumentasi->deskripsi; ?></p>
+                                                          <h4><?= $Photo_video->nama_Photo_video; ?></h4>
+                                                          <p class="price"><?= number_format($Photo_video->harga_Photo_video,0,',','.'); ?> Dh</p>
+                                                          <p class="alamat"><?= $Photo_video->deskripsi; ?></p>
                                                       </div>
                                                   </div>
                                               </label>

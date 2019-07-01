@@ -40,17 +40,17 @@ INSERT INTO `decoration` (`dekorasi_id`, `nama_dekorasi`, `deskripsi`, `harga_de
 (3, '3éme pack', '<li>Estrade des mariés avec décorations</li><li>Eclairage à l’intérieur</li><li>DJ</li><li>Issawa ou dakka marrakchia</li><li><p>Neggafa :</p><ul><li>3 Tenus avec accessoires</li><li>Ammaria</li><li>Robe Marié et bouquet de fleur</li></ul></li>', '11000', 'Table_03.jpg');
 
 
-# Dump of table dokumentasi
+# Dump of table Photo_video
 # ------------------------------------------------------------
 
-DROP TABLE IF EXISTS `dokumentasi`;
+DROP TABLE IF EXISTS `Photo_video`;
 
-CREATE TABLE `dokumentasi` (
-  `dokumentasi_id` int(11) NOT NULL AUTO_INCREMENT,
-  `nama_dokumentasi` varchar(255) NOT NULL,
+CREATE TABLE `Photo_video` (
+  `Photo_video_id` int(11) NOT NULL AUTO_INCREMENT,
+  `nama_Photo_video` varchar(255) NOT NULL,
   `deskripsi` TEXT NOT NULL,
-  `harga_dokumentasi` decimal(11,0) NOT NULL,
-  PRIMARY KEY (`dokumentasi_id`)
+  `harga_Photo_video` decimal(11,0) NOT NULL,
+  PRIMARY KEY (`Photo_video_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
@@ -181,15 +181,15 @@ CREATE TABLE `pemesanan_dekorasi` (
 
 
 
-# Dump of table pemesanan_dokumentasi
+# Dump of table pemesanan_Photo_video
 # ------------------------------------------------------------
 
-DROP TABLE IF EXISTS `pemesanan_dokumentasi`;
+DROP TABLE IF EXISTS `pemesanan_Photo_video`;
 
-CREATE TABLE `pemesanan_dokumentasi` (
+CREATE TABLE `pemesanan_Photo_video` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `pemesanan_id` varchar(15) NOT NULL,
-  `dokumentasi_id` int(11) NOT NULL,
+  `Photo_video_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

@@ -43,7 +43,7 @@ class Transaksi extends My_Controller {
         'Mis_en_beaute' => $this->input->post('Mis_en_beaute'),
         'katering' => $this->input->post('katering'),
         'dekorasi' => $this->input->post('dekorasi'),
-        'dokumentasi' => $this->input->post('dokumentasi')
+        'Photo_video' => $this->input->post('Photo_video')
       ];
 
       // var_dump($data_transaksi);
