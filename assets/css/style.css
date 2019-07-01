@@ -560,7 +560,7 @@ section#register {
   background-repeat: no-repeat;
 }
 section#register .section-heading {
-  color: white;
+  /* color: white; */
 }
 section#register .form-group {
   margin-bottom: 25px;

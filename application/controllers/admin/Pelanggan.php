@@ -49,7 +49,7 @@ class Pelanggan extends Admin_Controller {
             $this->db->insert('pelanggan',$data);
 
             // REDIRECT TO USER PAGE
-            $this->session->set_flashdata('success','Data berhasil disimpan!');
+            $this->session->set_flashdata('success','Données sauvegardées avec succès!');
             redirect(base_url() . 'admin/pelanggan/');
         }
     }
@@ -87,7 +87,7 @@ class Pelanggan extends Admin_Controller {
             $this->db->update('pelanggan',$data);
 
             // REDIRECT TO USER PAGE
-            $this->session->set_flashdata('success','Data berhasil diperbarui!');
+            $this->session->set_flashdata('success','Données mises à jour avec succès!');
             redirect(base_url() . 'admin/pelanggan/');
         }
     }
@@ -97,7 +97,7 @@ class Pelanggan extends Admin_Controller {
         $this->db->where('pelanggan_id',$id);
         $this->db->delete('pelanggan');
 
-        $this->session->set_flashdata('success','Data berhasil dihapus!');
+        $this->session->set_flashdata('success','Données supprimées avec succès!');
         redirect(base_url() . 'admin/pelanggan/');
     }
 }

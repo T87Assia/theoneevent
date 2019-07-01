@@ -7,7 +7,7 @@
     <?php endif; ?>
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h4 class="panel-title"><i class="fa fa-female"></i> Mis_en_beaute</h4>
+            <h4 class="panel-title"><i class="fa fa-female"></i> Mise en beauté</h4>
         </div>
         <div class="panel-body">
             <div class="tool-box">

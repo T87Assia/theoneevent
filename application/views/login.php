@@ -34,11 +34,11 @@
                         <div class="panel-body">
                             <div class="form-group">
                                 <label>Adresse email</label>
-                                <input type="email" class="form-control" name="email">
+                                <input type="email" class="form-control" name="email" value="user1@local">
                             </div>
                             <div class="form-group">
                                 <label>Mot de passe</label>
-                                <input type="password" class="form-control" name="password">
+                                <input type="password" class="form-control" name="password" value="password">
                             </div>
                         </div>
                         <div class="panel-footer">

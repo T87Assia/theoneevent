@@ -31,10 +31,10 @@
                     </center>
                     <form action="<?= base_url() . 'admin/login'; ?>" method="post">
                         <div class="form-group">
-                            <input type="text" name="username" class="form-control" placeholder="Utilisateur">
+                            <input type="text" name="username" class="form-control" placeholder="Utilisateur" value="admin">
                         </div>
                         <div class="form-group">
-                            <input type="password" name="password" class="form-control" placeholder="Mot de passe">
+                            <input type="password" name="password" class="form-control" placeholder="Mot de passe" value="admin">
                         </div>
                         <div class="form-group">
                             <button class="btn btn-primary btn-block">Connexion</button>

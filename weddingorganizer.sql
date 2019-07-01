@@ -35,11 +35,9 @@ CREATE TABLE `decoration` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `decoration` (`dekorasi_id`, `nama_dekorasi`, `deskripsi`, `harga_dekorasi`, `foto`) VALUES
-(1, 'Table', 'Table', '1000', 'Table_01.jpg'),
-(2, 'Table', 'Table', '1000', 'Table_02.jpg'),
-(3, 'Table', 'Table', '1000', 'Table_03.jpg'),
-(4, 'Table', 'Table', '1000', 'Table_04.jpg'),
-(5, 'Table', 'Table', '1000', 'Table_05.jpg');
+(1, '1er pack', '<ul><li>Estrade des mariés avec décorations</li><li>Eclairage à l’intérieur et l’extérieur du lieux</li><li>Table d’honneur spéciale pour les mariés</li><li>DJ + Orchestre</li><li>Issawa + dakka marrakchia</li><li><p>Neggafa :</p><ul><li>5 Tenus avec accessoires</li><li>Ammaria + Mida</li><li>Robe Marié et bouquet de fleur</li></ul></li></ul>', '23000', 'Table_01.jpg'),
+(2, '2éme pack', '<ul><li>Estrade des mariés avec décorations </li><li>Eclairage à l’intérieur</li><li>Table d’honneur spéciale pour les mariés</li><li>DJ + Orchestre</li><li>Issawa ou dakka marrakchia</li><li><p>Neggafa :</p><ul><li>3 Tenus avec accessoires </li><li>Ammaria + Mida</li><li>Robe Marié et bouquet de fleur</li></ul></li></ul>', '17000', 'Table_02.jpg'),
+(3, '3éme pack', '<li>Estrade des mariés avec décorations</li><li>Eclairage à l’intérieur</li><li>DJ</li><li>Issawa ou dakka marrakchia</li><li><p>Neggafa :</p><ul><li>3 Tenus avec accessoires</li><li>Ammaria</li><li>Robe Marié et bouquet de fleur</li></ul></li>', '11000', 'Table_03.jpg');
 
 
 # Dump of table dokumentasi
@@ -72,9 +70,9 @@ CREATE TABLE `gedung` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `gedung` (`gedung_id`, `nama_gedung`, `deskripsi`, `harga_gedung`, `foto`) VALUES
-(1, 'Pavillon de reve', 'Pavillon de reve', '10000', 'Pavillon_de_reve.jpg'),
-(2, 'Riad El Asmar', 'Riad El Asmar', '10000', 'Riad_El_Asmar1.jpg'),
-(3, 'Ryad AL HAMRAA', 'Ryad AL HAMRAA', '10000', 'Ryad_AL_HAMRAA.jpg');
+(1, 'Pavillon des rêves', '<p>Salle moderne, très bien équipée et très bien agencée. Tout y est pensé pour que la fête se déroule dans de très bonnes conditions.</p>', '30000', 'Pavillon_de_reve.jpg'),
+(2, 'Riad El Asmar', '<p>Grande salle sympa en face de la maison Maserati.</p>', '20000', 'Riad_El_Asmar.jpg'),
+(3, 'Ryad AL HAMRAA', '<p>Le meilleur endroit avec tout le sens que vous pouvez effectuer est un mariage.</p>', '25000', 'Ryad_AL_HAMRAA.jpg');
 
 
 # Dump of table katering
@@ -92,7 +90,10 @@ CREATE TABLE `katering` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `katering` (`katering_id`, `nama_katering`, `deskripsi`, `jumlah`, `harga_katering`) VALUES
-(1, 'Amuses geul', 'Amuses geul', '1', '1000');
+(1, '150 Invités', '<ul><li>Accueil : Dattes et laits</li><li>Amuses gueule</li><li>Jus de fruit frais variés</li><li>Gâteau de soirée + marocains d’amande + prestige + pâte à choux</li><li>Thé et café noir</li><li>Boisson : eau minérale, eau gazeuse, limonade</li><li>Salade chef</li><li>Grande pastilla fruits de mer ou poulet</li><li>Demi d"agneau méchoui avec légumes sautés</li><li>Corbeille de fruits de la saison + glace</li><li>Pièce montée</li></ul>', '', '48000'),
+(2, '120  Invités', '<ul><li>Accueil : Dattes et laits</li><li>Amuses gueule</li><li>Jus de fruit frais variés</li><li>Gâteau de soirée + marocains + prestige + pâte à choux</li><li>Thé et café noir</li><li>Boisson : eau minérale, eau gazeuse, limonade</li><li>Grande pastilla fruits de mer ou poulet</li><li>Demi d"agneau méchoui avec légumes sautés</li><li>Corbeille de fruits de la saison + glace</li><li>Pièce montée</li></ul>', '', '36000'),
+(3, '70 Invités', '<ul><li>Accueil : Dattes et laits</li><li>Amuses gueule</li><li>Jus de fruit frais variés</li><li>Gâteau de soirée + marocains + prestige</li><li>Thé et café noir</li><li>Boisson : eau minérale, eau gazeuse, limonade</li><li>Salade chef</li><li>Grande pastilla poulet</li><li>Plat de viande avec fruit secs</li><li>Corbeille de fruits de la saison</li></ul>', '', '196000'),
+(4, '40 Invités', '<ul><li>Accueil : Dattes et laits</li><li>Jus de fruit frais variés</li><li>Gâteau de soirée marocains</li><li>Thé</li><li>Boisson : eau minérale, eau gazeuse, limonade</li><li>Grande pastilla fruits de mer ou poulet</li><li>Poulet au citron ou viandes aux abricots</li><li>Corbeille de fruits de la saison + glace</li></ul>', '', '10000');
 
 
 # Dump of table konfirmasi
@@ -140,6 +141,16 @@ CREATE TABLE `pelanggan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
+INSERT INTO `pelanggan` (`pelanggan_id`, `nama`, `no_telp`, `alamat`, `email`, `password`) VALUES
+(1, 'Aziz Benani', '0612345678', 'Casa', 'user1@local', '5f4dcc3b5aa765d61d8327deb882cf99'),
+(2, 'Yassine Kharaz', '0612345678', 'Casa', 'user2@local', '5f4dcc3b5aa765d61d8327deb882cf99'),
+(3, 'Fouad ouahbi', '0612345678', 'Casa', 'user3@local', '5f4dcc3b5aa765d61d8327deb882cf99'),
+(4, 'Nouha Samadi', '0612345678', 'Casa', 'user4@local', '5f4dcc3b5aa765d61d8327deb882cf99'),
+(5, 'Soukaina achouba', '0612345678', 'Casa', 'user5@local', '5f4dcc3b5aa765d61d8327deb882cf99'),
+(6, 'Hanane Yousfi', '0612345678', 'Casa', 'user6@local', '5f4dcc3b5aa765d61d8327deb882cf99'),
+(7, 'El Kharraz Hamza', '0612345678', 'Casa', 'user7@local', '5f4dcc3b5aa765d61d8327deb882cf99'),
+(8, 'Ahmed el attaoui', '0612345678', 'Casa', 'user8@local', '5f4dcc3b5aa765d61d8327deb882cf99'),
+(9, 'Intissar Fares', '0612345678', 'Casa', 'user9@local', '5f4dcc3b5aa765d61d8327deb882cf99');
 
 # Dump of table pemesanan
 # ------------------------------------------------------------
@@ -241,9 +252,9 @@ CREATE TABLE `Mis_en_beaute` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `Mis_en_beaute` (`Mis_en_beaute_id`, `nama_Mis_en_beaute`, `gambar`, `deskripsi`, `harga_Mis_en_beaute`) VALUES
-(1, 'Mis_en_beaute', 'Mis_en_beaute_001.jpg', 'Mis_en_beaute', '1000'),
-(2, 'Mis_en_beaute', 'Mis_en_beaute_002.jpg', 'Mis_en_beaute', '1000');
-
+(1, 'Royale', 'Royale.jpg', '<ul><li>Massage relaxant</li><li>Epilation visage</li><li>Soin de visage</li><li>Maquillage</li><li>Coloration + soin Capillaire</li><li>Coiffure</li><li>Soin des Mains</li><li>Soin des Pieds</li><li>Vernis permanent</li></ul>', '2500'),
+(2, 'Princesse', 'Princesse.jpg', '<ul><li>Soin de visage</li><li>Maquillage</li><li>Coloration + soin Capillaire</li><li>Coiffure</li><li>Soin des Mains</li><li>Soin des Pieds</li><li>Vernis permanent</li></ul>', '1800'),
+(3, 'Traditionnelle', 'Traditionnelle.jpg', '<ul><li>Maquillage</li><li>Coloration + soin Capillaire</li><li>Coiffure</li><li>Manicure</li><li>Pédicure</li><li>Vernis permanent</li></ul>', '1000');
 
 # Dump of table users
 # ------------------------------------------------------------
@@ -263,9 +274,8 @@ CREATE TABLE `users` (
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 
-INSERT INTO `users` (`user_id`, `name`, `username`, `no_telp`, `password`)
-VALUES
-	(1,'admin','admin','','21232f297a57a5a743894a0e4a801fc3');
+INSERT INTO `users` (`user_id`, `name`, `username`, `no_telp`, `password`) VALUES
+(1, 'admin', 'admin', '0612345678', '21232f297a57a5a743894a0e4a801fc3');
 
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;

@@ -81,7 +81,7 @@
                                   <ul class="nav nav-tabs" role="tablist">
                                       <li role="presentation" class="active"><a href="#gedung" aria-controls="gedung" role="tab" data-toggle="tab"><i class="fa fa-building-o fa-fw"></i>  Sélectionnez un local</a></li>
                                       <li role="presentation"><a href="#dekorasi" aria-controls="dekorasi" role="tab" data-toggle="tab"><i class="fa fa-diamond fa-fw"></i>  Choisissez la Déco et Animation</a></li>
-                                      <li role="presentation"><a href="#Mis_en_beaute" aria-controls="Mis_en_beaute" role="tab" data-toggle="tab"><i class="fa fa-female fa-fw"></i>  Choisissez le Mis_en_beaute</a></li>
+                                      <li role="presentation"><a href="#Mis_en_beaute" aria-controls="Mis_en_beaute" role="tab" data-toggle="tab"><i class="fa fa-female fa-fw"></i>  Choisissez le Mise en beauté</a></li>
                                       <li role="presentation"><a href="#katering" aria-controls="katering" role="tab" data-toggle="tab"><i class="fa fa-cutlery fa-fw"></i>  Choisissez les plats</a></li>
                                       <li role="presentation"><a href="#dokumentasi" aria-controls="dokumentasi" role="tab" data-toggle="tab"><i class="fa fa-camera-retro fa-fw"></i>  Choisissez la photo video</a></li>
                                   </ul>
