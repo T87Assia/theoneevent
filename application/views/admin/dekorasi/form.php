@@ -1,5 +1,5 @@
 <div class="form-group">
-    <label for="nama_dekorasi" class="control-label col-sm-3"> Nom de la décoration </label>
+    <label for="nama_dekorasi" class="control-label col-sm-3"> Nom de la déco animation </label>
     <div class="col-sm-6">
         <input type="text" name="nama_dekorasi" value="<?php echo set_value('nama_dekorasi',isset($dekorasi->nama_dekorasi) ? $dekorasi->nama_dekorasi : ''); ?>" class="form-control">
         <?php echo form_error('Nom_de_la_décoration'); ?>
@@ -20,7 +20,7 @@
     </div>
 </div>
 <div class="form-group">
-    <label for="deskripsi" class="control-label col-sm-3"> Photo du décoration </label>
+    <label for="deskripsi" class="control-label col-sm-3"> Photo du Déco et Animation </label>
     <div class="col-sm-4">
         <input type="file" name="foto" value="">
         <?php echo form_error('Photo'); ?>

@@ -18,7 +18,7 @@
 								</div>
 						</div>
 						<div class="form-group">
-								<label for="no_rek" class="control-label col-sm-3"> Numéro de compte </label>
+								<label for="no_rek" class="control-label col-sm-3"> Numéro du compte </label>
 								<div class="col-sm-7">
 										<input type="text" name="no_rek" value="<?php echo set_value('no_rek',isset($katering->no_rek) ? $katering->no_rek : ''); ?>" class="form-control" required>
 										<?php echo form_error('no_rek'); ?>

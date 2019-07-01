@@ -7,17 +7,17 @@
     <?php endif; ?>
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h4 class="panel-title"><i class="fa fa-cutlery"></i> Plat</h4>
+            <h4 class="panel-title"><i class="fa fa-cutlery"></i> Restauration</h4>
         </div>
         <div class="panel-body">
             <div class="tool-box">
-                <a href="<?php echo base_url() . 'admin/katering/create'; ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Ajouter un plat</a>
+                <a href="<?php echo base_url() . 'admin/katering/create'; ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Ajouter un pack</a>
             </div>
             <table class="table table-bordered table-striped table-hover">
                 <thead>
                     <tr>
                         <th>Num</th>
-                        <th>Type</th>
+                        <th>Pack</th>
                         <th>Montant</th>
                         <th>Prix</th>
                         <th>Description</th>

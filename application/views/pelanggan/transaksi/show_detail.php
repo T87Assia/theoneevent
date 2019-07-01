@@ -6,7 +6,7 @@
     </div>
     <div class="panel-body">
       <center>
-        <h3 class="page-header">Détails du location <br> <small>Numéro de la commande #<?= $detail->id_pemesanan ?></small></h3>
+        <h3 class="page-header">Détails de la commande <br> <small>Numéro de la commande #<?= $detail->id_pemesanan ?></small></h3>
       </center>
       <div class="col-sm-6">
         <dl class="dl-horizontal">
@@ -41,15 +41,15 @@
             </tr>
             <tr>
               <td>2</td>
-              <td> Décoration du local</td>
+              <td> Déco et Animation</td>
               <td><?= $detail->nama_dekorasi ?></td>
               <td><?= number_format($detail->harga_dekorasi,0,',','.') ?> Dh</td>
             </tr>
             <tr>
               <td>3</td>
-              <td> Maquillage</td>
-              <td><?= $detail->nama_rias ?></td>
-              <td><?= number_format($detail->harga_rias,0,',','.') ?> Dh</td>
+              <td> Mis_en_beaute</td>
+              <td><?= $detail->nama_Mis_en_beaute ?></td>
+              <td><?= number_format($detail->harga_Mis_en_beaute,0,',','.') ?> Dh</td>
             </tr>
             <tr>
               <td>4</td>
@@ -59,14 +59,14 @@
             </tr>
             <tr>
               <td>5</td>
-              <td> Immortalisation</td>
+              <td> Photo video</td>
               <td><?= $detail->nama_dokumentasi ?></td>
               <td><?= number_format($detail->harga_dokumentasi,0,',','.') ?> Dh</td>
             </tr>
             <tr>
               <th colspan="3">Total</th>
               <?php
-                $total = $detail->harga_gedung + $detail->harga_dekorasi + $detail->harga_katering + $detail->harga_rias + $detail->harga_dokumentasi;
+                $total = $detail->harga_gedung + $detail->harga_dekorasi + $detail->harga_katering + $detail->harga_Mis_en_beaute + $detail->harga_dokumentasi;
               ?>
               <td><?= number_format($total,0,',','.') ?> Dh</td>
             </tr>

@@ -2,14 +2,14 @@
     <label for="username" class="control-label col-sm-3"> Nom </label>
     <div class="col-sm-6">
         <input type="text" name="name" value="<?php echo set_value('name',isset($user->name) ? $user->name : ''); ?>" class="form-control">
-        <?php echo form_error('name'); ?>
+        <?php echo form_error('Nom'); ?>
     </div>
 </div>
 <div class="form-group">
-    <label for="username" class="control-label col-sm-3"> Num GSM </label>
+    <label for="username" class="control-label col-sm-3"> GSM </label>
     <div class="col-sm-4">
         <input type="text" name="no_telp" value="<?php echo set_value('no_telp',isset($user->no_telp) ? $user->no_telp : ''); ?>" class="form-control">
-        <?php echo form_error('no_telp'); ?>
+        <?php echo form_error('GSM'); ?>
     </div>
 </div>
 <hr>
@@ -17,7 +17,7 @@
     <label for="username" class="control-label col-sm-3"> Nom d'utilisateur </label>
     <div class="col-sm-4">
         <input type="username" name="username" value="<?php echo set_value('username',isset($user->username) ? $user->username : ''); ?>" class="form-control">
-        <?php echo form_error('username'); ?>
+        <?php echo form_error('Nom utilisateur); ?>
     </div>
 </div>
 <div class="form-group">

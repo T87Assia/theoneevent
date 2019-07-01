@@ -39,12 +39,12 @@ class TransaksiModel extends CI_Model {
       $this->db->insert('pemesanan_gedung',$data_gedung);
     }
 
-    if ($data['rias'] != null) {
-      $data_rias = [
+    if ($data['Mis_en_beaute'] != null) {
+      $data_Mis_en_beaute = [
         'pemesanan_id' => $id_transaksi,
-        'rias_id' => $data['rias']
+        'Mis_en_beaute_id' => $data['Mis_en_beaute']
       ];
-      $this->db->insert('pemesanan_rias',$data_rias);
+      $this->db->insert('pemesanan_Mis_en_beaute',$data_Mis_en_beaute);
     }
 
     if ($data['katering'] != null) {
@@ -79,13 +79,13 @@ class TransaksiModel extends CI_Model {
     $this->db->where('id_pemesanan',$id);
     $this->db->join('pelanggan','pelanggan_id = pemesanan.user_id','left');
     $this->db->join('pemesanan_dekorasi','pemesanan_dekorasi.pemesanan_id = pemesanan.id_pemesanan','left');
-    $this->db->join('pemesanan_rias','pemesanan_rias.pemesanan_id = pemesanan.id_pemesanan','left');
+    $this->db->join('pemesanan_Mis_en_beaute','pemesanan_Mis_en_beaute.pemesanan_id = pemesanan.id_pemesanan','left');
     $this->db->join('pemesanan_dokumentasi','pemesanan_dokumentasi.pemesanan_id = pemesanan.id_pemesanan','left');
     $this->db->join('pemesanan_gedung','pemesanan_gedung.pemesanan_id = pemesanan.id_pemesanan','left');
     $this->db->join('pemesanan_katering','pemesanan_katering.pemesanan_id = pemesanan.id_pemesanan','left');
     $this->db->join('gedung','gedung.gedung_id = pemesanan_gedung.gedung_id','left');
     $this->db->join('decoration','decoration.dekorasi_id = pemesanan_dekorasi.dekorasi_id','left');
-    $this->db->join('rias','rias.rias_id = pemesanan_rias.rias_id','left');
+    $this->db->join('Mis_en_beaute','Mis_en_beaute.Mis_en_beaute_id = pemesanan_Mis_en_beaute.Mis_en_beaute_id','left');
     $this->db->join('katering','katering.katering_id = pemesanan_katering.katering_id','left');
     $this->db->join('dokumentasi','dokumentasi.dokumentasi_id = pemesanan_dokumentasi.dokumentasi_id','left');
     $query = $this->db->get();

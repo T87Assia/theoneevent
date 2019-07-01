@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-	<title>THE ONE EVENT | Organisation de mariage Haut de gamme</title>
+	<title>THE ONE EVENT | Organisation d'evennement Haut de gamme</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -43,7 +43,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Service</a>
+                        <a class="page-scroll" href="#services">Services</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#register">Inscription</a>
@@ -85,7 +85,7 @@
                         <i class="fa fa-building-o fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Local</h4>
-                    <p class="text-muted">Fournissez aux bâtiments locatifs les critères dont vous avez besoin</p>
+                    <p class="text-muted">Choisir le local qui convient aux critères dont vous avez besoin</p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
@@ -93,14 +93,14 @@
                         <i class="fa fa-cutlery fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Restauration</h4>
-                    <p class="text-muted">Donnez le meilleur menu pour vos invités de notre meilleur chef</p>
+                    <p class="text-muted">Donnez le meilleur menu pour vos invités de nos meilleurs chefs</p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-camera-retro fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">Immortalisation</h4>
+                    <h4 class="service-heading">Photo video</h4>
                     <p class="text-muted">Capturez vos moments de l'événment avec les meilleurs résultats de nos meilleurs photographes</p>
                 </div>
                 <div class="col-md-4">
@@ -108,8 +108,8 @@
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-female fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">Maquillage</h4>
-                    <p class="text-muted">Devenez le roi et la reine de votre événement avec le meilleur maquillage de nos meilleurs maquilleurs</p>
+                    <h4 class="service-heading">Mis_en_beaute</h4>
+                    <p class="text-muted">Devenez le roi et la reine de votre événement avec le soin de nos meilleurs expert de beauté</p>
                 </div>
                 <div class="col-md-4"></div>
                 <div class="col-md-4">
@@ -117,8 +117,8 @@
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">Décoration</h4>
-                    <p class="text-muted">Rendez votre événement festif avec de belles décorations</p>
+                    <h4 class="service-heading">Déco animation</h4>
+                    <p class="text-muted">Rendez votre événement festif avec de belles décorations et de mellieur animations</p>
                 </div>
             </div>
         </div>

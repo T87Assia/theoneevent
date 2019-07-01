@@ -1,5 +1,5 @@
 <div class="form-group">
-    <label for="nama_dokumentasi" class="control-label col-sm-3"> Mode d'immortalisation </label>
+    <label for="nama_dokumentasi" class="control-label col-sm-3"> Mode de Photo video </label>
     <div class="col-sm-6">
         <input type="text" name="nama_dokumentasi" value="<?php echo set_value('nama_dokumentasi',isset($dokumentasi->nama_dokumentasi) ? $dokumentasi->nama_dokumentasi : ''); ?>" class="form-control">
         <?php echo form_error('Mode_immortalisation'); ?>

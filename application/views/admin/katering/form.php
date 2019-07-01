@@ -1,5 +1,5 @@
 <div class="form-group">
-    <label for="nama_katering" class="control-label col-sm-3"> Nom du plat </label>
+    <label for="nama_katering" class="control-label col-sm-3"> Pack </label>
     <div class="col-sm-6">
         <input type="text" name="nama_katering" value="<?php echo set_value('nama_katering',isset($katering->nama_katering) ? $katering->nama_katering : ''); ?>" class="form-control">
         <?php echo form_error('Nom du plat'); ?>

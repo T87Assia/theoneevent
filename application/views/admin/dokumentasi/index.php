@@ -7,11 +7,11 @@
     <?php endif; ?>
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h4 class="panel-title"><i class="fa fa-camera-retro"></i> Immortalisation</h4>
+            <h4 class="panel-title"><i class="fa fa-camera-retro"></i> Photo video</h4>
         </div>
         <div class="panel-body">
             <div class="tool-box">
-                <a href="<?php echo base_url() . 'admin/dokumentasi/create'; ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Ajout une immortalisation</a>
+                <a href="<?php echo base_url() . 'admin/dokumentasi/create'; ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Ajout une Photo video</a>
             </div>
             <table class="table table-bordered table-striped table-hover">
                 <thead>

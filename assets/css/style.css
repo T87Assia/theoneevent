@@ -554,7 +554,7 @@ aside.clients img {
   margin: 50px auto;
 }
 section#register {
-  background-color: #222222;
+  /* background-color: #222222; */
   /* background-image: url('../img/map-image.png'); */
   background-position: center;
   background-repeat: no-repeat;

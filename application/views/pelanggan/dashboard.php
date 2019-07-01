@@ -31,7 +31,7 @@
             <div class="col-sm-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                          Forfait que vous choisissez
+                          vos commandes
                     </div>
                     <div class="panel-body">
                         <?php if (isset($transaksi) and count($transaksi) != null): ?>
@@ -42,13 +42,13 @@
 																	<?php endforeach; ?>
                                 </ul>
                         <?php else: ?>
-                              Vous n'avez pas de transaction
+                              Vous n'avez pas de commande
                         <?php endif; ?>
                     </div>
                 </div>
             </div>
             <div class="col-sm-12">
-              <h4 class="page-header">Sélectionnez un forfait</h4>
+              <h4 class="page-header">Sélectionnez une date</h4>
               <div class="row">
                 <div class="col-sm-12">
                   <div class="panel panel-info">
@@ -57,7 +57,7 @@
                           <form class="" action="<?= base_url() . 'dashboard?date=' . $date; ?>" method="get">
                             <div class="alert alert-warning">
                               <ul>
-                                <li>Sélectionnez votre calendrier d'événements et cliquez sur le bouton d'affichage pour voir la disponibilité de nos services à cette date</li>
+                                <li>Sélectionnez votre date d'événements sur le calendrier et cliquez sur le bouton d'affichage pour voir la disponibilité de nos services à cette date</li>
                                 <li>Les réservations peuvent être faites au moins 10 jours à compter de la date de l'événement.</li>
                               </ul>
                             </div>
@@ -80,10 +80,10 @@
                                   <!-- Nav tabs -->
                                   <ul class="nav nav-tabs" role="tablist">
                                       <li role="presentation" class="active"><a href="#gedung" aria-controls="gedung" role="tab" data-toggle="tab"><i class="fa fa-building-o fa-fw"></i>  Sélectionnez un local</a></li>
-                                      <li role="presentation"><a href="#dekorasi" aria-controls="dekorasi" role="tab" data-toggle="tab"><i class="fa fa-diamond fa-fw"></i>  Choisissez la décoration</a></li>
-                                      <li role="presentation"><a href="#rias" aria-controls="rias" role="tab" data-toggle="tab"><i class="fa fa-female fa-fw"></i>  Choisissez le maquillage</a></li>
+                                      <li role="presentation"><a href="#dekorasi" aria-controls="dekorasi" role="tab" data-toggle="tab"><i class="fa fa-diamond fa-fw"></i>  Choisissez la Déco et Animation</a></li>
+                                      <li role="presentation"><a href="#Mis_en_beaute" aria-controls="Mis_en_beaute" role="tab" data-toggle="tab"><i class="fa fa-female fa-fw"></i>  Choisissez le Mis_en_beaute</a></li>
                                       <li role="presentation"><a href="#katering" aria-controls="katering" role="tab" data-toggle="tab"><i class="fa fa-cutlery fa-fw"></i>  Choisissez les plats</a></li>
-                                      <li role="presentation"><a href="#dokumentasi" aria-controls="dokumentasi" role="tab" data-toggle="tab"><i class="fa fa-camera-retro fa-fw"></i>  Choisissez le mode d'immortalisation</a></li>
+                                      <li role="presentation"><a href="#dokumentasi" aria-controls="dokumentasi" role="tab" data-toggle="tab"><i class="fa fa-camera-retro fa-fw"></i>  Choisissez la photo video</a></li>
                                   </ul>
 
                                   <!-- Tab panes -->
@@ -134,25 +134,25 @@
                                               </div>
                                             <?php endforeach; ?>
                                           <?php else: ?>
-                                            <h4><center>Désolé, aucune décoration n'est disponible à cette date</center></h4>
+                                            <h4><center>Désolé, aucune déco animation n'est disponible à cette date</center></h4>
                                           <?php endif; ?>
                                         </div>
                                     </div>
                                     <!-- End of Dekorasi -->
 
-                                    <!-- Rias -->
-                                    <div role="tabpanel" class="tab-pane" id="rias">
+                                    <!-- Mis_en_beaute -->
+                                    <div role="tabpanel" class="tab-pane" id="Mis_en_beaute">
                                         <div class="row">
-                                          <?php foreach ($this->db->get('rias')->result() as $rias): ?>
+                                          <?php foreach ($this->db->get('Mis_en_beaute')->result() as $Mis_en_beaute): ?>
                                             <div class="col-sm-4">
                                                 <label class="option">
                                                     <div class="thumbnail">
-                                                        <input type="radio" name="rias" value="<?= $rias->rias_id ?>">
-                                                        <img src="<?= base_url() . 'uploads/' . $rias->gambar; ?>" alt="" class="gambar-gedung">
+                                                        <input type="radio" name="Mis_en_beaute" value="<?= $Mis_en_beaute->Mis_en_beaute_id ?>">
+                                                        <img src="<?= base_url() . 'uploads/' . $Mis_en_beaute->gambar; ?>" alt="" class="gambar-gedung">
                                                         <div class="caption">
-                                                            <h4><?= $rias->nama_rias; ?></h4>
-                                                            <p class="price"><?= number_format($rias->harga_rias,0,',','.'); ?> Dh</p>
-                                                            <p class="alamat"><?= $rias->deskripsi; ?></p>
+                                                            <h4><?= $Mis_en_beaute->nama_Mis_en_beaute; ?></h4>
+                                                            <p class="price"><?= number_format($Mis_en_beaute->harga_Mis_en_beaute,0,',','.'); ?> Dh</p>
+                                                            <p class="alamat"><?= $Mis_en_beaute->deskripsi; ?></p>
                                                         </div>
                                                     </div>
                                                 </label>
@@ -160,7 +160,7 @@
                                           <?php endforeach; ?>
                                         </div>
                                     </div>
-                                    <!-- End of Rias -->
+                                    <!-- End of Mis_en_beaute -->
 
                                     <!-- Katering -->
                                     <div role="tabpanel" class="tab-pane" id="katering">

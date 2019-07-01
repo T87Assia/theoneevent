@@ -40,7 +40,7 @@ class Transaksi extends My_Controller {
       // Input data transaksi
       $data_transaksi = [
         'gedung' => $this->input->post('gedung'),
-        'rias' => $this->input->post('rias'),
+        'Mis_en_beaute' => $this->input->post('Mis_en_beaute'),
         'katering' => $this->input->post('katering'),
         'dekorasi' => $this->input->post('dekorasi'),
         'dokumentasi' => $this->input->post('dokumentasi')

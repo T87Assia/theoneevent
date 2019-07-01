@@ -56,6 +56,8 @@ $route['translate_uri_dashes'] = FALSE;
 $route['admin'] = 'admin/dashboard';
 $route['dashboard'] = 'pelanggan/dashboard';
 
+$route['paiement/confirmation'] = 'pelanggan/konfirmasi';
+
 $route['daftar'] = 'pelanggan/daftar/store';
 $route['logout'] = 'pelanggan/daftar/logout';
 

@@ -212,37 +212,37 @@ CREATE TABLE `pemesanan_katering` (
 
 
 
-# Dump of table pemesanan_rias
+# Dump of table pemesanan_Mis_en_beaute
 # ------------------------------------------------------------
 
-DROP TABLE IF EXISTS `pemesanan_rias`;
+DROP TABLE IF EXISTS `pemesanan_Mis_en_beaute`;
 
-CREATE TABLE `pemesanan_rias` (
+CREATE TABLE `pemesanan_Mis_en_beaute` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `pemesanan_id` varchar(15) NOT NULL,
-  `rias_id` int(11) NOT NULL,
+  `Mis_en_beaute_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
-# Dump of table rias
+# Dump of table Mis_en_beaute
 # ------------------------------------------------------------
 
-DROP TABLE IF EXISTS `rias`;
+DROP TABLE IF EXISTS `Mis_en_beaute`;
 
-CREATE TABLE `rias` (
-  `rias_id` int(11) NOT NULL AUTO_INCREMENT,
-  `nama_rias` varchar(50) NOT NULL,
+CREATE TABLE `Mis_en_beaute` (
+  `Mis_en_beaute_id` int(11) NOT NULL AUTO_INCREMENT,
+  `nama_Mis_en_beaute` varchar(50) NOT NULL,
   `gambar` varchar(255) NOT NULL,
   `deskripsi` TEXT NOT NULL,
-  `harga_rias` decimal(11,0) NOT NULL,
-  PRIMARY KEY (`rias_id`)
+  `harga_Mis_en_beaute` decimal(11,0) NOT NULL,
+  PRIMARY KEY (`Mis_en_beaute_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `rias` (`rias_id`, `nama_rias`, `gambar`, `deskripsi`, `harga_rias`) VALUES
-(1, 'Maquillage', 'Maquillage_001.jpg', 'Maquillage', '1000'),
-(2, 'Maquillage', 'Maquillage_002.jpg', 'Maquillage', '1000');
+INSERT INTO `Mis_en_beaute` (`Mis_en_beaute_id`, `nama_Mis_en_beaute`, `gambar`, `deskripsi`, `harga_Mis_en_beaute`) VALUES
+(1, 'Mis_en_beaute', 'Mis_en_beaute_001.jpg', 'Mis_en_beaute', '1000'),
+(2, 'Mis_en_beaute', 'Mis_en_beaute_002.jpg', 'Mis_en_beaute', '1000');
 
 
 # Dump of table users

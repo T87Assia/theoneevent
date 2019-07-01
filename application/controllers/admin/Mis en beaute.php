@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Rias extends Admin_Controller {
+class Mis_en_beaute extends Admin_Controller {
 
     public function __construct()
     {
@@ -15,7 +15,7 @@ class Rias extends Admin_Controller {
 
     public function index()
     {
-        $data['riases'] = $this->db->get('rias');
+        $data['Mis_en_beautees'] = $this->db->get('Mis_en_beaute');
 
         $this->template('index',$data);
     }
@@ -24,14 +24,14 @@ class Rias extends Admin_Controller {
     {
         $this->load->view('templates/admin/header');
         $this->load->view('templates/admin/sidemenu');
-        $this->load->view('admin/rias/'.$template,$data);
+        $this->load->view('admin/Mis_en_beaute/'.$template,$data);
         $this->load->view('templates/admin/footer');
     }
 
     private function validation() {
-        $this->form_validation->set_rules('nama_rias','nama_rias Rias','required');
+        $this->form_validation->set_rules('nama_Mis_en_beaute','nama_Mis_en_beaute Mis_en_beaute','required');
         $this->form_validation->set_rules('deskripsi','Deskripsi','required');
-        $this->form_validation->set_rules('harga_rias','Harga','required|numeric');
+        $this->form_validation->set_rules('harga_Mis_en_beaute','Harga','required|numeric');
     }
 
     public function create()
@@ -54,9 +54,9 @@ class Rias extends Admin_Controller {
             return;
         } else {
             $data = array(
-                'nama_rias' => $this->input->post('nama_rias'),
+                'nama_Mis_en_beaute' => $this->input->post('nama_Mis_en_beaute'),
                 'deskripsi' => $this->input->post('deskripsi'),
-                'harga_rias' => $this->input->post('harga_rias')
+                'harga_Mis_en_beaute' => $this->input->post('harga_Mis_en_beaute')
             );
 
             // UPLOAD IMAGE
@@ -64,11 +64,11 @@ class Rias extends Admin_Controller {
             $data['gambar'] = $this->upload->data('file_name');
 
             // INSERT INTO DATABASE
-            $this->db->insert('rias',$data);
+            $this->db->insert('maquiallage',$data);
 
             // REDIRECT TO USER PAGE
             $this->session->set_flashdata('success','Data berhasil disimpan!');
-            redirect(base_url() . 'admin/rias/');
+            redirect(base_url() . 'admin/Mis_en_beaute/');
         }
     }
 
@@ -76,12 +76,12 @@ class Rias extends Admin_Controller {
     {
         // jika id tidak ada maka halaman akan dialihkan
         if ($id == null) {
-            redirect(base_url() . 'admin/rias');
+            redirect(base_url() . 'admin/Mis_en_beaute');
         }
 
         // mengambil data dari table user berdasarkan id
-        $result = $this->db->get_where('rias',['rias_id' => $id]);
-        $data['rias'] = $result->row();
+        $result = $this->db->get_where('Mis_en_beaute',['Mis_en_beaute_id' => $id]);
+        $data['Mis_en_beaute'] = $result->row();
         $this->template('edit',$data);
     }
 
@@ -99,9 +99,9 @@ class Rias extends Admin_Controller {
             return;
         } else {
             $data = array(
-                'nama_rias' => $this->input->post('nama_rias'),
+                'nama_Mis_en_beaute' => $this->input->post('nama_Mis_en_beaute'),
                 'deskripsi' => $this->input->post('deskripsi'),
-                'harga_rias' => $this->input->post('harga_rias')
+                'harga_Mis_en_beaute' => $this->input->post('harga_Mis_en_beaute')
             );
 
             if ($this->input->post('gambar') != null) {
@@ -111,26 +111,26 @@ class Rias extends Admin_Controller {
             }
 
             // INSERT INTO DATABASE
-            $this->db->where('rias_id',$id);
-            $this->db->update('rias',$data);
+            $this->db->where('Mis_en_beaute_id',$id);
+            $this->db->update('Mis_en_beaute',$data);
 
             // REDIRECT TO USER PAGE
             $this->session->set_flashdata('success','Data berhasil diperbarui!');
-            redirect(base_url() . 'admin/rias/');
+            redirect(base_url() . 'admin/Mis_en_beaute/');
         }
     }
 
     public function delete($id)
     {
-        $data = $this->db->get_where('rias',['rias_id' => $id])->row();
+        $data = $this->db->get_where('Mis_en_beaute',['Mis_en_beaute_id' => $id])->row();
 
         // DELETING IMAGE
         unlink('uploads/' . $data->gambar);
 
-        $this->db->delete('rias',['rias_id' => $id]);
+        $this->db->delete('Mis_en_beaute',['Mis_en_beaute_id' => $id]);
 
         $this->session->set_flashdata('success','Data berhasil dihapus!');
-        redirect(base_url() . 'admin/rias/');
+        redirect(base_url() . 'admin/Mis_en_beaute/');
     }
 }
 
