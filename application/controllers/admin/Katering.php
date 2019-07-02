@@ -63,7 +63,7 @@ class Katering extends Admin_Controller {
 
         // mengambil data dari table user berdasarkan id
         $result = $this->db->get_where('katering',['katering_id' => $id]);
-        $data['katering'] = $result->row();
+		$data['katering'] = $result->row();
         $this->template('edit',$data);
     }
 
@@ -72,8 +72,8 @@ class Katering extends Admin_Controller {
         $this->validation();
 
         if ($this->form_validation->run() == FALSE) {
-            $this->template('edit');
-            return;
+			$this->template('edit',$data);
+			return;
         } else {
             $data = array(
                 'nama_katering' => $this->input->post('nama_katering'),

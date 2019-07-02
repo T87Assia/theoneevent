@@ -1,5 +1,5 @@
 <div class="form-group">
-    <label for="nama_Mis_en_beaute" class="control-label col-sm-3"> Nom Mis_en_beaute </label>
+    <label for="nama_Mis_en_beaute" class="control-label col-sm-3"> Nom Mise en beauté </label>
     <div class="col-sm-6">
         <input type="text" name="nama_Mis_en_beaute" value="<?php echo set_value('nama_Mis_en_beaute',isset($Mis_en_beaute->nama_Mis_en_beaute) ? $Mis_en_beaute->nama_Mis_en_beaute : ''); ?>" class="form-control">
         <?php echo form_error('Nom_Mis_en_beaute'); ?>

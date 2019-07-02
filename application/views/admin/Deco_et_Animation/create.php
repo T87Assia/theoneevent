@@ -4,7 +4,7 @@
             <h4 class="panel-title"><i class="fa fa-diamond"></i> Déco et Animation </h4>
         </div>
         <div class="panel-body">
-            <form action="<?php  echo base_url() . 'admin/dekorasi/store'; ?>" class="form-horizontal" method="post" enctype="multipart/form-data">
+            <form action="<?php  echo base_url() . 'admin/Deco_et_Animation/store'; ?>" class="form-horizontal" method="post" enctype="multipart/form-data">
                 <?php include 'form.php'; ?>
             </form>
         </div>

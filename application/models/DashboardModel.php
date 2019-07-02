@@ -16,12 +16,12 @@ class DashboardModel extends CI_Model {
     return $query->result();
   }
 
-  public function dataDekorasi($tanggal)
+  public function dataDeco_et_Animation($tanggal)
   {
-    $query = $this->db->select('*, decoration.dekorasi_id')
+    $query = $this->db->select('*, decoration.Deco_et_Animation_id')
                       ->from('decoration')
-                      ->join('pemesanan_dekorasi','pemesanan_dekorasi.dekorasi_id = decoration.dekorasi_id','left')
-                      ->join('pemesanan','pemesanan.id_pemesanan = pemesanan_dekorasi.pemesanan_id','left')
+                      ->join('pemesanan_Deco_et_Animation','pemesanan_Deco_et_Animation.Deco_et_Animation_id = decoration.Deco_et_Animation_id','left')
+                      ->join('pemesanan','pemesanan.id_pemesanan = pemesanan_Deco_et_Animation.pemesanan_id','left')
                       ->where('tgl_acara',null)
                       ->or_where('tgl_acara !=',$tanggal)
                       ->get();

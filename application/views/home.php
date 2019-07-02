@@ -108,7 +108,7 @@
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-female fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">Mis_en_beaute</h4>
+                    <h4 class="service-heading">Mise en beauté</h4>
                     <p class="text-muted">Devenez le roi et la reine de votre événement avec le soin de nos meilleurs expert de beauté</p>
                 </div>
                 <div class="col-md-4"></div>

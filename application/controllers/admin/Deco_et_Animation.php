@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Dekorasi extends Admin_Controller {
+class Deco_et_Animation extends Admin_Controller {
 
     public function __construct()
     {
@@ -24,14 +24,14 @@ class Dekorasi extends Admin_Controller {
     {
         $this->load->view('templates/admin/header');
         $this->load->view('templates/admin/sidemenu');
-        $this->load->view('admin/dekorasi/'.$template,$data);
+        $this->load->view('admin/Deco_et_Animation/'.$template,$data);
         $this->load->view('templates/admin/footer');
     }
 
     private function validation() {
-        $this->form_validation->set_rules('nama_dekorasi','Nama Dekorasi','required');
+        $this->form_validation->set_rules('nama_Deco_et_Animation','Nama Deco_et_Animation','required');
         $this->form_validation->set_rules('deskripsi','Deskripsi','required');
-        $this->form_validation->set_rules('harga_dekorasi','Harga','required|numeric');
+        $this->form_validation->set_rules('harga_Deco_et_Animation','Harga','required|numeric');
     }
 
     public function create()
@@ -54,9 +54,9 @@ class Dekorasi extends Admin_Controller {
             return;
         } else {
             $data = array(
-                'nama_dekorasi' => $this->input->post('nama_dekorasi'),
+                'nama_Deco_et_Animation' => $this->input->post('nama_Deco_et_Animation'),
                 'deskripsi' => $this->input->post('deskripsi'),
-                'harga_dekorasi' => $this->input->post('harga_dekorasi')
+                'harga_Deco_et_Animation' => $this->input->post('harga_Deco_et_Animation')
             );
 
             // UPLOAD IMAGE
@@ -68,7 +68,7 @@ class Dekorasi extends Admin_Controller {
 
             // REDIRECT TO USER PAGE
             $this->session->set_flashdata('success','Données sauvegardées avec succès!');
-            redirect(base_url() . 'admin/dekorasi/');
+            redirect(base_url() . 'admin/Deco_et_Animation/');
         }
     }
 
@@ -76,12 +76,12 @@ class Dekorasi extends Admin_Controller {
     {
         // jika id tidak ada maka halaman akan dialihkan
         if ($id == null) {
-            redirect(base_url() . 'admin/dekorasi');
+            redirect(base_url() . 'admin/Deco_et_Animation');
         }
 
         // mengambil data dari table user berdasarkan id
-        $result = $this->db->get_where('decoration',['dekorasi_id' => $id]);
-        $data['dekorasi'] = $result->row();
+        $result = $this->db->get_where('decoration',['Deco_et_Animation_id' => $id]);
+        $data['Deco_et_Animation'] = $result->row();
         $this->template('edit',$data);
     }
 
@@ -98,13 +98,13 @@ class Dekorasi extends Admin_Controller {
                     $error = null;
                 }
             }
-            $this->template('edit',$error);
+			$this->template('edit',$error);
             return;
         } else {
             $data = array(
-                'nama_dekorasi' => $this->input->post('nama_dekorasi'),
+                'nama_Deco_et_Animation' => $this->input->post('nama_Deco_et_Animation'),
                 'deskripsi' => $this->input->post('deskripsi'),
-                'harga_dekorasi' => $this->input->post('harga_dekorasi')
+                'harga_Deco_et_Animation' => $this->input->post('harga_Deco_et_Animation')
             );
 
             if ($this->input->post('foto') != null) {
@@ -114,28 +114,28 @@ class Dekorasi extends Admin_Controller {
             }
 
             // INSERT INTO DATABASE
-            $this->db->where('dekorasi_id',$id);
+            $this->db->where('Deco_et_Animation_id',$id);
             $this->db->update('decoration',$data);
 
             // REDIRECT TO USER PAGE
             $this->session->set_flashdata('success','Données mises à jour avec succès!');
-            redirect(base_url() . 'admin/dekorasi/');
+            redirect(base_url() . 'admin/Deco_et_Animation/');
         }
     }
 
     public function delete($id)
     {
-        $data = $this->db->get_where('decoration',['dekorasi_id' => $id])->row();
+        $data = $this->db->get_where('decoration',['Deco_et_Animation_id' => $id])->row();
 
         // DELETING IMAGE
         if ($data->foto != '') {
           unlink('uploads/' . $data->foto);
         }
 
-        $this->db->delete('decoration',['dekorasi_id' => $id]);
+        $this->db->delete('decoration',['Deco_et_Animation_id' => $id]);
 
         $this->session->set_flashdata('success','Données supprimées avec succès!');
-        redirect(base_url() . 'admin/dekorasi/');
+        redirect(base_url() . 'admin/Deco_et_Animation/');
     }
 }
 

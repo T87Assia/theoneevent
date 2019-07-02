@@ -20,21 +20,21 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
-# Dump of table dekorasi
+# Dump of table Deco_et_Animation
 # ------------------------------------------------------------
 
 DROP TABLE IF EXISTS `decoration`;
 
 CREATE TABLE `decoration` (
-  `dekorasi_id` int(11) NOT NULL AUTO_INCREMENT,
-  `nama_dekorasi` varchar(15) NOT NULL,
+  `Deco_et_Animation_id` int(11) NOT NULL AUTO_INCREMENT,
+  `nama_Deco_et_Animation` varchar(15) NOT NULL,
   `deskripsi` TEXT NOT NULL,
-  `harga_dekorasi` decimal(11,0) NOT NULL,
+  `harga_Deco_et_Animation` decimal(11,0) NOT NULL,
   `foto` varchar(255) NOT NULL,
-  PRIMARY KEY (`dekorasi_id`)
+  PRIMARY KEY (`Deco_et_Animation_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `decoration` (`dekorasi_id`, `nama_dekorasi`, `deskripsi`, `harga_dekorasi`, `foto`) VALUES
+INSERT INTO `decoration` (`Deco_et_Animation_id`, `nama_Deco_et_Animation`, `deskripsi`, `harga_Deco_et_Animation`, `foto`) VALUES
 (1, '1er pack', '<ul><li>Estrade des mariés avec décorations</li><li>Eclairage à l’intérieur et l’extérieur du lieux</li><li>Table d’honneur spéciale pour les mariés</li><li>DJ + Orchestre</li><li>Issawa + dakka marrakchia</li><li><p>Neggafa :</p><ul><li>5 Tenus avec accessoires</li><li>Ammaria + Mida</li><li>Robe Marié et bouquet de fleur</li></ul></li></ul>', '23000', 'Table_01.jpg'),
 (2, '2éme pack', '<ul><li>Estrade des mariés avec décorations </li><li>Eclairage à l’intérieur</li><li>Table d’honneur spéciale pour les mariés</li><li>DJ + Orchestre</li><li>Issawa ou dakka marrakchia</li><li><p>Neggafa :</p><ul><li>3 Tenus avec accessoires </li><li>Ammaria + Mida</li><li>Robe Marié et bouquet de fleur</li></ul></li></ul>', '17000', 'Table_02.jpg'),
 (3, '3éme pack', '<li>Estrade des mariés avec décorations</li><li>Eclairage à l’intérieur</li><li>DJ</li><li>Issawa ou dakka marrakchia</li><li><p>Neggafa :</p><ul><li>3 Tenus avec accessoires</li><li>Ammaria</li><li>Robe Marié et bouquet de fleur</li></ul></li>', '11000', 'Table_03.jpg');
@@ -172,19 +172,19 @@ INSERT INTO `pemesanan` (`id_pemesanan`, `user_id`, `tgl_acara`, `status`) VALUE
 ('201907141', 9, '2019-07-14', 'pending');
 
 
-# Dump of table pemesanan_dekorasi
+# Dump of table pemesanan_Deco_et_Animation
 # ------------------------------------------------------------
 
-DROP TABLE IF EXISTS `pemesanan_dekorasi`;
+DROP TABLE IF EXISTS `pemesanan_Deco_et_Animation`;
 
-CREATE TABLE `pemesanan_dekorasi` (
+CREATE TABLE `pemesanan_Deco_et_Animation` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `pemesanan_id` varchar(15) NOT NULL,
-  `dekorasi_id` int(11) NOT NULL,
+  `Deco_et_Animation_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `pemesanan_dekorasi` (`id`, `pemesanan_id`, `dekorasi_id`) VALUES
+INSERT INTO `pemesanan_Deco_et_Animation` (`id`, `pemesanan_id`, `Deco_et_Animation_id`) VALUES
 (1, '201907121', 1);
 
 
