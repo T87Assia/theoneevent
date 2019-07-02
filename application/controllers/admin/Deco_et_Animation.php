@@ -98,7 +98,7 @@ class Deco_et_Animation extends Admin_Controller {
                     $error = null;
                 }
             }
-            $this->template('edit',$error);
+			$this->template('edit',$error);
             return;
         } else {
             $data = array(
