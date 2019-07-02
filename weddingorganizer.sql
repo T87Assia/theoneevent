@@ -184,7 +184,7 @@ CREATE TABLE `pemesanan_Deco_et_Animation` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `pemesanan_Deco_et_Animation` (`id`, `pemesanan_id`, `dekorasi_id`) VALUES
+INSERT INTO `pemesanan_Deco_et_Animation` (`id`, `pemesanan_id`, `Deco_et_Animation_id`) VALUES
 (1, '201907121', 1);
 
 
