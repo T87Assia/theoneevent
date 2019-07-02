@@ -1,7 +1,7 @@
 
     <?php
     defined('BASEPATH') OR exit('No direct script access allowed');
-    class Migration_Pemesanan_Dokumentasi extends CI_Migration {
+    class Migration_Pemesanan_Photo_video extends CI_Migration {
         public function up() {
             $this->dbforge->add_field(array(
                 'id' => array(
@@ -13,16 +13,16 @@
                     'type' => 'VARCHAR',
                     'constraint' => 15
                 ),
-                'dokumentasi_id' => array(
+                'Photo_video_id' => array(
                     'type' => 'INT',
                     'constraint' => 11
                 )
             ));
             $this->dbforge->add_key('id',TRUE);
-            $this->dbforge->create_table('pemesanan_dokumentasi');
+            $this->dbforge->create_table('pemesanan_Photo_video');
         }
 
         public function down() {
-            $this->dbforge->drop_table('pemesanan_dokumentasi');
+            $this->dbforge->drop_table('pemesanan_Photo_video');
         }
     }

@@ -4,7 +4,7 @@
             <h4 class="panel-title"><i class="fa fa-diamond"></i> Déco animation </h4>
         </div>
         <div class="panel-body">
-            <form action="<?php  echo base_url() . 'admin/dekorasi/store'; ?>" class="form-horizontal" method="post">
+            <form action="<?php  echo base_url() . 'admin/Deco_et_Animation/store'; ?>" class="form-horizontal" method="post">
                 <?php include 'form.php'; ?>
             </form>
         </div>

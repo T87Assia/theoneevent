@@ -55,20 +55,20 @@ class TransaksiModel extends CI_Model {
       $this->db->insert('pemesanan_katering',$data_katering);
     }
 
-    if ($data['dekorasi'] != null) {
-      $data_dekorasi = [
+    if ($data['Deco_et_Animation'] != null) {
+      $data_Deco_et_Animation = [
         'pemesanan_id' => $id_transaksi,
-        'dekorasi_id' => $data['dekorasi']
+        'Deco_et_Animation_id' => $data['Deco_et_Animation']
       ];
-      $this->db->insert('pemesanan_dekorasi',$data_dekorasi);
+      $this->db->insert('pemesanan_Deco_et_Animation',$data_Deco_et_Animation);
     }
 
-    if ($data['dokumentasi'] != null) {
-      $data_dokumentasi = [
+    if ($data['Photo_video'] != null) {
+      $data_Photo_video = [
         'pemesanan_id' => $id_transaksi,
-        'dokumentasi_id' => $data['dokumentasi']
+        'Photo_video_id' => $data['Photo_video']
       ];
-      $this->db->insert('pemesanan_dokumentasi',$data_dokumentasi);
+      $this->db->insert('pemesanan_Photo_video',$data_Photo_video);
     }
   }
 
@@ -78,16 +78,16 @@ class TransaksiModel extends CI_Model {
     $this->db->from('pemesanan');
     $this->db->where('id_pemesanan',$id);
     $this->db->join('pelanggan','pelanggan_id = pemesanan.user_id','left');
-    $this->db->join('pemesanan_dekorasi','pemesanan_dekorasi.pemesanan_id = pemesanan.id_pemesanan','left');
+    $this->db->join('pemesanan_Deco_et_Animation','pemesanan_Deco_et_Animation.pemesanan_id = pemesanan.id_pemesanan','left');
     $this->db->join('pemesanan_Mis_en_beaute','pemesanan_Mis_en_beaute.pemesanan_id = pemesanan.id_pemesanan','left');
-    $this->db->join('pemesanan_dokumentasi','pemesanan_dokumentasi.pemesanan_id = pemesanan.id_pemesanan','left');
+    $this->db->join('pemesanan_Photo_video','pemesanan_Photo_video.pemesanan_id = pemesanan.id_pemesanan','left');
     $this->db->join('pemesanan_gedung','pemesanan_gedung.pemesanan_id = pemesanan.id_pemesanan','left');
     $this->db->join('pemesanan_katering','pemesanan_katering.pemesanan_id = pemesanan.id_pemesanan','left');
     $this->db->join('gedung','gedung.gedung_id = pemesanan_gedung.gedung_id','left');
-    $this->db->join('decoration','decoration.dekorasi_id = pemesanan_dekorasi.dekorasi_id','left');
+    $this->db->join('decoration','decoration.Deco_et_Animation_id = pemesanan_Deco_et_Animation.Deco_et_Animation_id','left');
     $this->db->join('Mis_en_beaute','Mis_en_beaute.Mis_en_beaute_id = pemesanan_Mis_en_beaute.Mis_en_beaute_id','left');
     $this->db->join('katering','katering.katering_id = pemesanan_katering.katering_id','left');
-    $this->db->join('dokumentasi','dokumentasi.dokumentasi_id = pemesanan_dokumentasi.dokumentasi_id','left');
+    $this->db->join('Photo_video','Photo_video.Photo_video_id = pemesanan_Photo_video.Photo_video_id','left');
     $query = $this->db->get();
 
     return $query->row();

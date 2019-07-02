@@ -11,7 +11,7 @@
         </div>
         <div class="panel-body">
             <div class="tool-box">
-                <a href="<?php echo base_url() . 'admin/dokumentasi/create'; ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Ajout une Photo video</a>
+                <a href="<?php echo base_url() . 'admin/Photo_video/create'; ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Ajout une Photo video</a>
             </div>
             <table class="table table-bordered table-striped table-hover">
                 <thead>
@@ -25,15 +25,15 @@
                 </thead>
                 <tbody>
                     <?php $no=1; ?>
-                    <?php foreach($dok->result() as $dokumentasi): ?>
+                    <?php foreach($dok->result() as $Photo_video): ?>
                         <tr>
                             <td><?= $no++ ?></td>
-                            <td><?= $dokumentasi->nama_dokumentasi ?></td>
-                            <td><?= $dokumentasi->harga_dokumentasi ?></td>
-                            <td><?= $dokumentasi->deskripsi ?></td>
+                            <td><?= $Photo_video->nama_Photo_video ?></td>
+                            <td><?= $Photo_video->harga_Photo_video ?></td>
+                            <td><?= $Photo_video->deskripsi ?></td>
                             <td width="10%">
-                                <a href="<?php echo base_url() . 'admin/dokumentasi/edit/'.$dokumentasi->dokumentasi_id; ?>" class="btn btn-xs btn-info" title="Modifier"><i class="fa fa-pencil fa-fw"></i></a>
-                                <a href="<?php echo base_url() . 'admin/dokumentasi/delete/'.$dokumentasi->dokumentasi_id; ?>" class="btn btn-xs btn-danger" title="Supprimer" onclick="return confirm('Vous êtes sûr de vouloir supprimer ces données ?')"><i class="fa fa-trash fa-fw"></i></a>
+                                <a href="<?php echo base_url() . 'admin/Photo_video/edit/'.$Photo_video->Photo_video_id; ?>" class="btn btn-xs btn-info" title="Modifier"><i class="fa fa-pencil fa-fw"></i></a>
+                                <a href="<?php echo base_url() . 'admin/Photo_video/delete/'.$Photo_video->Photo_video_id; ?>" class="btn btn-xs btn-danger" title="Supprimer" onclick="return confirm('Vous êtes sûr de vouloir supprimer ces données ?')"><i class="fa fa-trash fa-fw"></i></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

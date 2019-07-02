@@ -41,8 +41,8 @@
             <tr>
               <td>2</td>
               <td> Déco animation</td>
-              <td><?= $detail->nama_dekorasi ?></td>
-              <td><?= number_format($detail->harga_dekorasi,0,',','.') ?> Dh</td>
+              <td><?= $detail->nama_Deco_et_Animation ?></td>
+              <td><?= number_format($detail->harga_Deco_et_Animation,0,',','.') ?> Dh</td>
             </tr>
             <tr>
               <td>3</td>
@@ -59,13 +59,13 @@
             <tr>
               <td>5</td>
               <td> Photo video</td>
-              <td><?= $detail->nama_dokumentasi ?></td>
-              <td><?= number_format($detail->harga_dokumentasi,0,',','.') ?> Dh</td>
+              <td><?= $detail->nama_Photo_video ?></td>
+              <td><?= number_format($detail->harga_Photo_video,0,',','.') ?> Dh</td>
             </tr>
             <tr>
               <th colspan="3">Total</th>
               <?php
-                $total = $detail->harga_gedung + $detail->harga_dekorasi + $detail->harga_katering + $detail->harga_Mis_en_beaute + $detail->harga_dokumentasi;
+                $total = $detail->harga_gedung + $detail->harga_Deco_et_Animation + $detail->harga_katering + $detail->harga_Mis_en_beaute + $detail->harga_Photo_video;
               ?>
               <td><?= number_format($total,0,',','.') ?> Dh</td>
             </tr>

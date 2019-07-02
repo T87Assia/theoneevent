@@ -80,10 +80,10 @@
                                   <!-- Nav tabs -->
                                   <ul class="nav nav-tabs" role="tablist">
                                       <li role="presentation" class="active"><a href="#gedung" aria-controls="gedung" role="tab" data-toggle="tab"><i class="fa fa-building-o fa-fw"></i>  Sélectionnez un local</a></li>
-                                      <li role="presentation"><a href="#dekorasi" aria-controls="dekorasi" role="tab" data-toggle="tab"><i class="fa fa-diamond fa-fw"></i>  Choisissez la Déco et Animation</a></li>
+                                      <li role="presentation"><a href="#Deco_et_Animation" aria-controls="Deco_et_Animation" role="tab" data-toggle="tab"><i class="fa fa-diamond fa-fw"></i>  Choisissez la Déco et Animation</a></li>
                                       <li role="presentation"><a href="#Mis_en_beaute" aria-controls="Mis_en_beaute" role="tab" data-toggle="tab"><i class="fa fa-female fa-fw"></i>  Choisissez le Mise en beauté</a></li>
                                       <li role="presentation"><a href="#katering" aria-controls="katering" role="tab" data-toggle="tab"><i class="fa fa-cutlery fa-fw"></i>  Choisissez les plats</a></li>
-                                      <li role="presentation"><a href="#dokumentasi" aria-controls="dokumentasi" role="tab" data-toggle="tab"><i class="fa fa-camera-retro fa-fw"></i>  Choisissez la photo video</a></li>
+                                      <li role="presentation"><a href="#Photo_video" aria-controls="Photo_video" role="tab" data-toggle="tab"><i class="fa fa-camera-retro fa-fw"></i>  Choisissez la photo video</a></li>
                                   </ul>
 
                                   <!-- Tab panes -->
@@ -114,20 +114,20 @@
                                     </div>
                                     <!-- End of Gedung -->
 
-                                    <!-- Dekorasi -->
-                                    <div role="tabpanel" class="tab-pane" id="dekorasi">
+                                    <!-- Deco_et_Animation -->
+                                    <div role="tabpanel" class="tab-pane" id="Deco_et_Animation">
                                         <div class="row">
-                                          <?php if (count($this->DashboardModel->dataDekorasi($date)) > 0 ): ?>
-                                            <?php foreach ($this->DashboardModel->dataDekorasi($date) as $dekorasi): ?>
+                                          <?php if (count($this->DashboardModel->dataDeco_et_Animation($date)) > 0 ): ?>
+                                            <?php foreach ($this->DashboardModel->dataDeco_et_Animation($date) as $Deco_et_Animation): ?>
                                               <div class="col-sm-4">
                                                   <label class="option">
                                                       <div class="thumbnail">
-                                                          <input type="radio" name="dekorasi" value="<?= $dekorasi->dekorasi_id ?>">
-                                                          <img src="<?= base_url() . 'uploads/' . $dekorasi->foto; ?>" alt="" class="gambar-gedung">
+                                                          <input type="radio" name="Deco_et_Animation" value="<?= $Deco_et_Animation->Deco_et_Animation_id ?>">
+                                                          <img src="<?= base_url() . 'uploads/' . $Deco_et_Animation->foto; ?>" alt="" class="gambar-gedung">
                                                           <div class="caption">
-                                                              <h4><?= $dekorasi->nama_dekorasi; ?></h4>
-                                                              <p class="price"><?= number_format($dekorasi->harga_dekorasi,0,',','.'); ?> Dh</p>
-                                                              <p class="alamat"><?= $dekorasi->deskripsi; ?></p>
+                                                              <h4><?= $Deco_et_Animation->nama_Deco_et_Animation; ?></h4>
+                                                              <p class="price"><?= number_format($Deco_et_Animation->harga_Deco_et_Animation,0,',','.'); ?> Dh</p>
+                                                              <p class="alamat"><?= $Deco_et_Animation->deskripsi; ?></p>
                                                           </div>
                                                       </div>
                                                   </label>
@@ -138,7 +138,7 @@
                                           <?php endif; ?>
                                         </div>
                                     </div>
-                                    <!-- End of Dekorasi -->
+                                    <!-- End of Deco_et_Animation -->
 
                                     <!-- Mis_en_beaute -->
                                     <div role="tabpanel" class="tab-pane" id="Mis_en_beaute">
@@ -184,19 +184,19 @@
                                     </div>
                                     <!-- End of Katering -->
 
-                                    <!-- Dokumentasi -->
-                                    <div role="tabpanel" class="tab-pane" id="dokumentasi">
+                                    <!-- Photo_video -->
+                                    <div role="tabpanel" class="tab-pane" id="Photo_video">
                                       <div class="row">
-                                        <?php foreach ($this->db->get('dokumentasi')->result() as $dokumentasi): ?>
+                                        <?php foreach ($this->db->get('Photo_video')->result() as $Photo_video): ?>
                                           <div class="col-sm-4">
                                               <label class="option">
                                                   <div class="thumbnail">
-                                                      <input type="radio" name="dokumentasi" value="<?= $dokumentasi->dokumentasi_id ?>">
-                                                      <!-- <img src="<?= base_url() . 'uploads/' . $dokumentasi->gambar; ?>" alt="" class="gambar-gedung"> -->
+                                                      <input type="radio" name="Photo_video" value="<?= $Photo_video->Photo_video_id ?>">
+                                                      <!-- <img src="<?= base_url() . 'uploads/' . $Photo_video->gambar; ?>" alt="" class="gambar-gedung"> -->
                                                       <div class="caption">
-                                                          <h4><?= $dokumentasi->nama_dokumentasi; ?></h4>
-                                                          <p class="price"><?= number_format($dokumentasi->harga_dokumentasi,0,',','.'); ?> Dh</p>
-                                                          <p class="alamat"><?= $dokumentasi->deskripsi; ?></p>
+                                                          <h4><?= $Photo_video->nama_Photo_video; ?></h4>
+                                                          <p class="price"><?= number_format($Photo_video->harga_Photo_video,0,',','.'); ?> Dh</p>
+                                                          <p class="alamat"><?= $Photo_video->deskripsi; ?></p>
                                                       </div>
                                                   </div>
                                               </label>
