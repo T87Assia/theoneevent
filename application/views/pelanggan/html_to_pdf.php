@@ -45,7 +45,7 @@
             </tr>
             <tr>
               <td>3</td>
-              <td> Mis_en_beaute</td>
+              <td> Mise en beauté</td>
               <td><?= $detail->nama_Mis_en_beaute ?></td>
               <td><?= number_format($detail->harga_Mis_en_beaute,0,',','.') ?> Dh</td>
             </tr>
