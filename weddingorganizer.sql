@@ -54,7 +54,6 @@ CREATE TABLE `Photo_video` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-
 # Dump of table gedung
 # ------------------------------------------------------------
 
@@ -112,6 +111,8 @@ CREATE TABLE `konfirmasi` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+INSERT INTO `konfirmasi` (`id`, `pelanggan_id`, `pemesanan_id`, `no_rek`, `nama_bank`, `pemilik`, `foto`) VALUES
+(1, 1, 201907121, '1234567890', 'TIPS€PA', 'LE CREANCIER', 'Preuve.jpg');
 
 
 # Dump of table migrations
@@ -122,7 +123,6 @@ DROP TABLE IF EXISTS `migrations`;
 CREATE TABLE `migrations` (
   `version` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 
 
 # Dump of table pelanggan
@@ -152,6 +152,7 @@ INSERT INTO `pelanggan` (`pelanggan_id`, `nama`, `no_telp`, `alamat`, `email`, `
 (8, 'Ahmed el attaoui', '0612345678', 'Casa', 'user8@local', '5f4dcc3b5aa765d61d8327deb882cf99'),
 (9, 'Intissar Fares', '0612345678', 'Casa', 'user9@local', '5f4dcc3b5aa765d61d8327deb882cf99');
 
+
 # Dump of table pemesanan
 # ------------------------------------------------------------
 
@@ -165,6 +166,10 @@ CREATE TABLE `pemesanan` (
   PRIMARY KEY (`id_pemesanan`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+INSERT INTO `pemesanan` (`id_pemesanan`, `user_id`, `tgl_acara`, `status`) VALUES
+('201907121', 1, '2019-07-12', 'active'),
+('201907131', 7, '2019-07-13', 'pending'),
+('201907141', 9, '2019-07-14', 'pending');
 
 
 # Dump of table pemesanan_dekorasi
@@ -179,6 +184,8 @@ CREATE TABLE `pemesanan_dekorasi` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+INSERT INTO `pemesanan_dekorasi` (`id`, `pemesanan_id`, `dekorasi_id`) VALUES
+(1, '201907121', 1);
 
 
 # Dump of table pemesanan_Photo_video
@@ -194,7 +201,6 @@ CREATE TABLE `pemesanan_Photo_video` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-
 # Dump of table pemesanan_gedung
 # ------------------------------------------------------------
 
@@ -207,7 +213,8 @@ CREATE TABLE `pemesanan_gedung` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-
+INSERT INTO `pemesanan_gedung` (`id`, `pemesanan_id`, `gedung_id`) VALUES
+(1, '201907121', 1);
 
 # Dump of table pemesanan_katering
 # ------------------------------------------------------------
@@ -221,6 +228,8 @@ CREATE TABLE `pemesanan_katering` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+INSERT INTO `pemesanan_katering` (`id`, `pemesanan_id`, `katering_id`) VALUES
+(1, '201907121', 1);
 
 
 # Dump of table pemesanan_Mis_en_beaute
@@ -235,7 +244,8 @@ CREATE TABLE `pemesanan_Mis_en_beaute` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-
+INSERT INTO `pemesanan_mis_en_beaute` (`id`, `pemesanan_id`, `Mis_en_beaute_id`) VALUES
+(1, '201907121', 1);
 
 # Dump of table Mis_en_beaute
 # ------------------------------------------------------------
@@ -255,6 +265,7 @@ INSERT INTO `Mis_en_beaute` (`Mis_en_beaute_id`, `nama_Mis_en_beaute`, `gambar`,
 (1, 'Royale', 'Royale.jpg', '<ul><li>Massage relaxant</li><li>Epilation visage</li><li>Soin de visage</li><li>Maquillage</li><li>Coloration + soin Capillaire</li><li>Coiffure</li><li>Soin des Mains</li><li>Soin des Pieds</li><li>Vernis permanent</li></ul>', '2500'),
 (2, 'Princesse', 'Princesse.jpg', '<ul><li>Soin de visage</li><li>Maquillage</li><li>Coloration + soin Capillaire</li><li>Coiffure</li><li>Soin des Mains</li><li>Soin des Pieds</li><li>Vernis permanent</li></ul>', '1800'),
 (3, 'Traditionnelle', 'Traditionnelle.jpg', '<ul><li>Maquillage</li><li>Coloration + soin Capillaire</li><li>Coiffure</li><li>Manicure</li><li>Pédicure</li><li>Vernis permanent</li></ul>', '1000');
+
 
 # Dump of table users
 # ------------------------------------------------------------
