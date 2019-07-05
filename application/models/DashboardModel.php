@@ -3,27 +3,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class DashboardModel extends CI_Model {
 
-  public function dataGedung($tanggal)
+  public function dataSalle($tanggal)
   {
-    $query = $this->db->select('*, gedung.gedung_id')
-                      ->from('gedung')
-                      ->join('pemesanan_gedung','pemesanan_gedung.gedung_id = gedung.gedung_id','left')
-                      ->join('pemesanan','pemesanan.id_pemesanan = pemesanan_gedung.pemesanan_id','left')
-                      ->where('tgl_acara !=',$tanggal)
-                      ->or_where('tgl_acara',null)
+    $query = $this->db->select('*, salle.salle_id')
+                      ->from('salle')
+                      ->join('reservation_salle','reservation_salle.salle_id = salle.salle_id','left')
+                      ->join('reservation','reservation.id_reservation = reservation_salle.reservation_id','left')
+                      ->where('jour !=',$tanggal)
+                      ->or_where('jour',null)
                       ->get();
 
     return $query->result();
   }
 
-  public function dataDeco_et_Animation($tanggal)
+  public function datadecoration($tanggal)
   {
-    $query = $this->db->select('*, decoration.Deco_et_Animation_id')
+    $query = $this->db->select('*, decoration.decoration_id')
                       ->from('decoration')
-                      ->join('pemesanan_Deco_et_Animation','pemesanan_Deco_et_Animation.Deco_et_Animation_id = decoration.Deco_et_Animation_id','left')
-                      ->join('pemesanan','pemesanan.id_pemesanan = pemesanan_Deco_et_Animation.pemesanan_id','left')
-                      ->where('tgl_acara',null)
-                      ->or_where('tgl_acara !=',$tanggal)
+                      ->join('reservation_decoration','reservation_decoration.decoration_id = decoration.decoration_id','left')
+                      ->join('reservation','reservation.id_reservation = reservation_decoration.reservation_id','left')
+                      ->where('jour',null)
+                      ->or_where('jour !=',$tanggal)
                       ->get();
 
     return $query->result();

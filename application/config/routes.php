@@ -54,25 +54,21 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['admin'] = 'admin/dashboard';
-$route['dashboard'] = 'pelanggan/dashboard';
-
-$route['paiement/confirmation'] = 'pelanggan/konfirmasi';
-
-$route['daftar'] = 'pelanggan/daftar/store';
-$route['logout'] = 'pelanggan/daftar/logout';
-
+$route['dashboard'] = 'client/dashboard';
 
 // Login Handler
-$route['login']['get'] = 'pelanggan/login/index';
-$route['login']['post'] = 'pelanggan/login/check';
+$route['login']['get'] = 'client/login/index';
+$route['login']['post'] = 'client/login/check';
+
+$route['registre'] = 'client/registre/store';
+$route['logout'] = 'client/registre/logout';
 
 $route['admin/login']['get'] = 'admin/login/index';
 $route['admin/login']['post'] = 'admin/login/check';
 $route['admin/logout']['get'] = 'admin/login/logout';
 
-$route['pelanggan/transaksi']['post'] = 'pelanggan/transaksi/store';
-$route['lihat/transaksi/(:num)']['get'] = 'pelanggan/transaksi/show/$1';
+$route['client/transaction']['post'] = 'client/transaction/store';
+$route['client/transaction/(:num)']['get'] = 'client/transaction/show/$1';
 
-
-$route['admin/pemesanan/detail/(:num)']['get'] = 'admin/pemesanan/show/$1';
-$route['admin/pemesanan/update/(:num)']['post'] = 'admin/pemesanan/update/$1';
+$route['admin/reservation/detail/(:num)']['get'] = 'admin/reservation/show/$1';
+$route['admin/reservation/update/(:num)']['post'] = 'admin/reservation/update/$1';

@@ -8,7 +8,7 @@
 <div class="form-group">
     <label for="username" class="control-label col-sm-3"> GSM </label>
     <div class="col-sm-4">
-        <input type="text" name="no_telp" value="<?php echo set_value('no_telp',isset($user->no_telp) ? $user->no_telp : ''); ?>" class="form-control">
+        <input type="text" name="tel" value="<?php echo set_value('tel',isset($user->tel) ? $user->tel : ''); ?>" class="form-control">
         <?php echo form_error('GSM'); ?>
     </div>
 </div>

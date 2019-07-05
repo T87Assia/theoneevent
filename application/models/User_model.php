@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class User_model extends CI_Model {
   public $name;
-  public $no_telp;
+  public $tel;
   public $password;
   public $username;
 
@@ -16,7 +16,7 @@ class User_model extends CI_Model {
   public function insert()
   {
     $this->name = $this->input->post('name');
-    $this->no_telp = $this->input->post('no_telp');
+    $this->tel = $this->input->post('tel');
     $this->password = md5($this->input->post('password'));
     $this->username = $this->input->post('username');
 
@@ -32,7 +32,7 @@ class User_model extends CI_Model {
   public function update($id)
   {
     $this->name = $this->input->post('name');
-    $this->no_telp = $this->input->post('no_telp');
+    $this->tel = $this->input->post('tel');
     $this->password = md5($this->input->post('password'));
     $this->username = $this->input->post('username');
 

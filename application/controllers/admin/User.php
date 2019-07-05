@@ -26,7 +26,7 @@ class User extends Admin_Controller {
   private function validation() {
     $this->form_validation->set_rules('username','Username','required');
     $this->form_validation->set_rules('name','Nama','required');
-    $this->form_validation->set_rules('no_telp','No Telp','required|numeric|max_length[12]');
+    $this->form_validation->set_rules('tel','Numéro de téléphone','required|numeric|max_length[12]');
     $this->form_validation->set_rules('password','Password','required');
   }
 

@@ -62,8 +62,8 @@
     <header>
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">Bienvenue à THE ONE EVENT</div>
-                <div class="intro-heading">C'est votre partenaire de bonheur</div>
+                <div class="intro-lead-in">Bienvenue à</div>
+                <div class="intro-heading">Votre partenaire de bonheur</div>
                 <a href="#services" class="page-scroll btn btn-xl">Dites nous en plus</a>
             </div>
         </div>
@@ -74,8 +74,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Service</h2>
-                    <h3 class="section-subheading text-muted">Le meilleur service de notre part pour vous.</h3>
+                    <h2 class="section-heading">Services</h2>
+                    <h3 class="section-subheading text-muted">Les meilleurs services de notre part pour vous.</h3>
                 </div>
             </div>
             <div class="row text-center">
@@ -84,24 +84,16 @@
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-building-o fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">Local</h4>
-                    <p class="text-muted">Choisir le local qui convient aux critères dont vous avez besoin</p>
+                    <h4 class="service-heading">Salles des Fêtes</h4>
+                    <p class="text-muted">Choisir la salle qui convient aux critères dont vous avez besoin</p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-cutlery fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">Restauration</h4>
+                    <h4 class="service-heading">Restaurations</h4>
                     <p class="text-muted">Donnez le meilleur menu pour vos invités de nos meilleurs chefs</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-camera-retro fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Photo video</h4>
-                    <p class="text-muted">Capturez vos moments de l'événment avec les meilleurs résultats de nos meilleurs photographes</p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
@@ -111,13 +103,21 @@
                     <h4 class="service-heading">Mise en beauté</h4>
                     <p class="text-muted">Devenez le roi et la reine de votre événement avec le soin de nos meilleurs expert de beauté</p>
                 </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-gift fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Dragées</h4>
+                    <p class="text-muted">Choisir les dragées à offrir</p>
+                </div>
                 <div class="col-md-4"></div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">Déco animation</h4>
+                    <h4 class="service-heading">Décorations et animations</h4>
                     <p class="text-muted">Rendez votre événement festif avec de belles décorations et de mellieur animations</p>
                 </div>
             </div>
@@ -135,20 +135,20 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form action="<?php echo base_url() . 'daftar'; ?>" method="post">
+                    <form action="<?php echo base_url() . 'registre'; ?>" method="post">
                         <div class="row">
 							<div class="col-md-3"></div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" name="nama" class="form-control" placeholder="Nom *" value="<?php echo set_value('nama',isset($pelanggan->nama) ? $pelanggan->nama : ''); ?>" required>
+                                    <input type="text" name="nama" class="form-control" placeholder="Nom *" value="<?php echo set_value('nama',isset($client->nama) ? $client->nama : ''); ?>" required>
                                     <p class="help-block text-danger"><?php echo $this->session->flashdata('nama'); ?></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="no_telp" class="form-control" placeholder="GSM *" value="<?php echo set_value('nama',isset($pelanggan->no_telp) ? $pelanggan->no_telp : ''); ?>">
-                                    <p class="help-block text-danger"><?php echo $this->session->flashdata('no_telp'); ?></p>
+                                    <input type="text" name="tel" class="form-control" placeholder="GSM *" value="<?php echo set_value('nama',isset($client->tel) ? $client->tel : ''); ?>">
+                                    <p class="help-block text-danger"><?php echo $this->session->flashdata('tel'); ?></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" name="email" class="form-control" placeholder="Email *" id="email" value="<?php echo set_value('nama',isset($pelanggan->email) ? $pelanggan->email : ''); ?>" required>
+                                    <input type="email" name="email" class="form-control" placeholder="Email *" id="email" value="<?php echo set_value('nama',isset($client->email) ? $client->email : ''); ?>" required>
                                     <p class="help-block text-danger"><?php echo $this->session->flashdata('email'); ?></p>
                                 </div>
                                 <div class="form-group">
@@ -160,8 +160,8 @@
                                     <p class="help-block text-danger"><?php echo $this->session->flashdata('confirm_password'); ?></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="alamat" class="form-control" placeholder="Adresse *" value="<?php echo set_value('nama',isset($pelanggan->alamat) ? $pelanggan->alamat : ''); ?>" required>
-                                    <p class="help-block text-danger"><?php echo $this->session->flashdata('alamat'); ?></p>
+                                    <input type="text" name="adresse" class="form-control" placeholder="Adresse *" value="<?php echo set_value('nama',isset($client->adresse) ? $client->adresse : ''); ?>" required>
+                                    <p class="help-block text-danger"><?php echo $this->session->flashdata('adresse'); ?></p>
                                 </div>
                             </div>
                             <div class="clearfix"></div>
