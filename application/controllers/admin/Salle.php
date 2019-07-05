@@ -63,8 +63,6 @@ class Salle extends Admin_Controller {
             $this->upload->do_upload('photo');
             $data['photo'] = $this->upload->data('file_name');
 
-            // var_dump($data);
-
             // INSERT INTO DATABASE
             $this->db->insert('salle',$data);
 
@@ -76,12 +74,10 @@ class Salle extends Admin_Controller {
 
     public function edit($id)
     {
-        // jika id tidak ada maka halaman akan dialihkan
         if ($id == null) {
             redirect(base_url() . 'admin/salle');
 		}
 		
-        // mengambil data dari table user berdasarkan id
         $result = $this->db->get_where('salle',['salle_id' => $id]);
         $data['salle'] = $result->row();
         $this->template('edit',$data);

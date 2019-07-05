@@ -46,8 +46,6 @@ class Transaction extends My_Controller {
         'dragee' => $this->input->post('dragee')
       ];
 
-      // var_dump($data_transaction);
-
       $this->TransactionModel->simpanDetailTransaction($id_transaction,$data_transaction);
 
       redirect(base_url() . 'client/transaction/'.$id_transaction);
@@ -57,8 +55,6 @@ class Transaction extends My_Controller {
     {
       // echo $id;
 			$data['detail'] = $this->TransactionModel->getDataById($id);
-
-      // var_dump($data);
 
       $this->template('show_detail',$data);
     }

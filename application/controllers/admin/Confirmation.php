@@ -13,8 +13,6 @@ class Confirmation extends Admin_Controller {
     {
         $data['transactions'] = $this->ConfirmationModel->getConfirmation();
 
-        // var_dump($data);
-
         $this->template('index',$data);
     }
 

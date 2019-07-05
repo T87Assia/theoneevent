@@ -54,12 +54,10 @@ class Restauration extends Admin_Controller {
 
     public function edit($id)
     {
-        // jika id tidak ada maka halaman akan dialihkan
         if ($id == null) {
             redirect(base_url() . 'admin/restauration');
         }
 
-        // mengambil data dari table user berdasarkan id
         $result = $this->db->get_where('restauration',['restauration_id' => $id]);
 		$data['restauration'] = $result->row();
         $this->template('edit',$data);

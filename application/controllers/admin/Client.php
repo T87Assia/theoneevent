@@ -56,12 +56,10 @@ class Client extends Admin_Controller {
 
     public function edit($id)
     {
-        // jika id tidak ada maka halaman akan dialihkan
         if ($id == null) {
             redirect(base_url() . 'admin/client');
         }
 
-        // mengambil data dari table user berdasarkan id
         $result = $this->db->get_where('client',['client_id' => $id]);
         $data['client'] = $result->row();
         $this->template('edit',$data);

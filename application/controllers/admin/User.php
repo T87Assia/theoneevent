@@ -54,12 +54,10 @@ class User extends Admin_Controller {
 
   public function edit($id)
   {
-    // jika id tidak ada maka halaman akan dialihkan
     if ($id == null) {
       redirect(base_url() . 'admin/user');
     }
 
-    // mengambil data dari table user berdasarkan id
     $data['user'] = $this->user_model->get_where(['user_id' => $id]);
     $this->template('edit',$data);
   }

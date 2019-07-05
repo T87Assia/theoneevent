@@ -75,12 +75,10 @@ class Dragee extends Admin_Controller {
 
     public function edit($id)
     {
-        // jika id tidak ada maka halaman akan dialihkan
         if ($id == null) {
             redirect(base_url() . 'admin/dragee');
         }
 
-		// mengambil data dari table user berdasarkan id
         $result = $this->db->get_where('dragee',['dragee_id' => $id]);
         $data['dragee'] = $result->row();
         $this->template('edit',$data);

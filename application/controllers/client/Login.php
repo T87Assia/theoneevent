@@ -7,7 +7,6 @@ class Login extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
-        // Jika sudah login akan di alihkan ke halaman dashboard pelaggan
         if ($this->session->userdata('validate') != null) {
             redirect(base_url() . 'dashboard');
         }

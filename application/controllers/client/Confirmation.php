@@ -49,8 +49,6 @@ class Confirmation extends My_Controller {
         $this->upload->do_upload('photo');
         $data['photo'] = $this->upload->data('file_name');
 
-        // var_dump($data);
-
         // INSERT INTO DATABASE
         $this->db->insert('confirmation',$data);
 

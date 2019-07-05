@@ -18,10 +18,6 @@ class Dashboard extends My_Controller {
     $this->load->view('templates/client/sidemenu');
     $this->load->view('client/dashboard',$data);
     $this->load->view('templates/client/footer');
-
-    // echo $date = $_GET['date'];
-    // $result = $this->DashboardModel->dataSalle($date);
-    // var_dump($result);
   }
 
 }

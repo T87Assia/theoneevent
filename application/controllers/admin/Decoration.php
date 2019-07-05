@@ -74,12 +74,10 @@ class decoration extends Admin_Controller {
 
     public function edit($id)
     {
-        // jika id tidak ada maka halaman akan dialihkan
         if ($id == null) {
             redirect(base_url() . 'admin/decoration');
         }
 
-        // mengambil data dari table user berdasarkan id
         $result = $this->db->get_where('decoration',['decoration_id' => $id]);
         $data['decoration'] = $result->row();
         $this->template('edit',$data);

@@ -13,8 +13,6 @@ class Reservation extends Admin_Controller {
     {
         $data['transactions'] = $this->TransactionModel->getTransaction();
 
-        // var_dump($data);
-
         $this->template('index',$data);
     }
 
@@ -37,7 +35,6 @@ class Reservation extends Admin_Controller {
     public function show($id)
     {
       $data['detail'] = $this->TransactionModel->getDataById($id);
-      // var_dump($data);
 
       $this->template('show_detail',$data);
     }

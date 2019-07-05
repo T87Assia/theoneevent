@@ -74,12 +74,10 @@ class Beaute extends Admin_Controller {
 
     public function edit($id)
     {
-        // jika id tidak ada maka halaman akan dialihkan
         if ($id == null) {
             redirect(base_url() . 'admin/beaute');
         }
 
-        // mengambil data dari table user berdasarkan id
         $result = $this->db->get_where('beaute',['beaute_id' => $id]);
         $data['beaute'] = $result->row();
         $this->template('edit',$data);
